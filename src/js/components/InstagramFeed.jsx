@@ -5,15 +5,15 @@ import { Link } from "react-router-dom";
 
 const InstagramFeed = () => {
     const data = [
-        { url: "public/images/instagram/rred-ig-feed-1.jpg", time: "Just now" },
-        { url: "public/images/instagram/rred-ig-feed-2.jpg", time: "1 week ago" },
-        { url: "public/images/instagram/rred-ig-feed-3.jpg", time: "1 week ago" },
-        { url: "public/images/instagram/rred-ig-feed-4.jpg", time: "1 week ago" },
-        { url: "public/images/instagram/rred-ig-feed-5.jpg", time: "2 weeks ago" },
-        { url: "public/images/instagram/rred-ig-feed-6.jpg", time: "2 weeks ago" },
-        { url: "public/images/instagram/rred-ig-feed-7.jpg", time: "2 weeks ago" },
-        { url: "public/images/instagram/rred-ig-feed-8.jpg", time: "2 weeks ago" },
-        { url: "public/images/instagram/rred-ig-feed-9.jpg", time: "2 weeks ago" },
+        { url: "/images/instagram/rred-ig-feed-1.jpg", time: "Just now" },
+        { url: "/images/instagram/rred-ig-feed-2.jpg", time: "1 week ago" },
+        { url: "/images/instagram/rred-ig-feed-3.jpg", time: "1 week ago" },
+        { url: "/images/instagram/rred-ig-feed-4.jpg", time: "1 week ago" },
+        { url: "/images/instagram/rred-ig-feed-5.jpg", time: "2 weeks ago" },
+        { url: "/images/instagram/rred-ig-feed-6.jpg", time: "2 weeks ago" },
+        { url: "/images/instagram/rred-ig-feed-7.jpg", time: "2 weeks ago" },
+        { url: "/images/instagram/rred-ig-feed-8.jpg", time: "2 weeks ago" },
+        { url: "/images/instagram/rred-ig-feed-9.jpg", time: "2 weeks ago" },
     ]
 
     const feedHolder = useRef();
