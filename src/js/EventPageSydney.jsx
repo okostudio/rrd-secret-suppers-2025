@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet";
+// import { Helmet } from "react-helmet";
 import { HeroStatic } from "./components/Hero";
 import ScrollReveal from "./utils/ScrollReveal";
 import WideFooterImage from "./components/WideFooterImage";
@@ -123,13 +123,13 @@ const EventPageSydney = () => {
 
                 {/* <MeetTheChefs onSecretSuppersPage /> */}
                 <WideFooterImage imageUrl="/images/secret-suppers/ss-event1-footer-wide.jpg" />
-                <Helmet>
+                {/* <Helmet>
                     <title>{"Red Rock Deli®"}</title>
                     <meta
                         name="description"
                         content={"Red Rock Deli® - Feed Your Curiosity™"}
                     />
-                </Helmet>
+                </Helmet> */}
             </div>
         </ScrollReveal>
     );

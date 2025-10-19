@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ExternalLink } from "react-external-link";
+// import { ExternalLink } from "react-external-link";
 
 const ButtonPrimary = props => {
     let classes = "button-primary";
@@ -8,7 +8,7 @@ const ButtonPrimary = props => {
     return (
         <React.Fragment>
             {props.isExternalLink ? (
-                <ExternalLink
+                <Link
                     href={props.linkTo ? props.linkTo : ""}
                     className={classes}
                 >
@@ -16,7 +16,7 @@ const ButtonPrimary = props => {
                         {props.children}
                         {!props.hideChevron ? <span /> : null}
                     </button>
-                </ExternalLink>
+                </Link>
             ) : (
                 <Link to={props.linkTo ? props.linkTo : ""} className={classes}>
                     <button>

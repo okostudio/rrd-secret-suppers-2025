@@ -1,14 +1,28 @@
 import React, { useEffect, useState, useRef } from "react";
-import { ExternalLink } from "react-external-link";
-import Juicer from "./Juicer";
+// import { ExternalLink } from "react-external-link";
+// import Juicer from "./Juicer";
+import { Link } from "react-router-dom";
 
-const InstagramFeed = (props) => {
+const InstagramFeed = () => {
+    const data = [
+        { url: "public/images/instagram/rred-ig-feed-1.jpg", time: "Just now" },
+        { url: "public/images/instagram/rred-ig-feed-2.jpg", time: "1 week ago" },
+        { url: "public/images/instagram/rred-ig-feed-3.jpg", time: "1 week ago" },
+        { url: "public/images/instagram/rred-ig-feed-4.jpg", time: "1 week ago" },
+        { url: "public/images/instagram/rred-ig-feed-5.jpg", time: "2 weeks ago" },
+        { url: "public/images/instagram/rred-ig-feed-6.jpg", time: "2 weeks ago" },
+        { url: "public/images/instagram/rred-ig-feed-7.jpg", time: "2 weeks ago" },
+        { url: "public/images/instagram/rred-ig-feed-8.jpg", time: "2 weeks ago" },
+        { url: "public/images/instagram/rred-ig-feed-9.jpg", time: "2 weeks ago" },
+    ]
+
     const feedHolder = useRef();
     const [isLargeScreen, setIsLargeScreen] = useState(false);
     const onResizeIG = () => {
         setIsLargeScreen(window.innerWidth >= 768);
     };
     const [feedCount, setFeedCount] = useState(3);
+
 
     useEffect(() => {
         window.addEventListener("resize", onResizeIG);
@@ -28,7 +42,23 @@ const InstagramFeed = (props) => {
                     ref={feedHolder}
                     className={"feed-holder feed-count-" + feedCount}
                 >
-                    <Juicer feedID="red_rock_deli" feedCount={feedCount} />
+                    <div className="feed">
+                        {
+                            data.slice(0, feedCount).map((image, i) => {
+                                return (
+                                    <Link
+                                        className="item"
+                                        key={"feed-item-" + i}
+                                        href={"https://www.instagram.com/red_rock_deli/"}
+                                    >
+                                        <img src={image.url} alt="rrd" />
+                                        {/* <h5>{formatTime(item.time)}</h5> */}
+                                        <h5>{image.time}</h5>
+                                    </Link>
+                                )
+                            })
+                        }
+                    </div>
                 </div>
             </div>
 
@@ -67,14 +97,14 @@ const MoreButton = (props) => {
                     <button>{props.children}</button>
                 </div>
             ) : (
-                <ExternalLink
+                <Link
                     href="https://www.instagram.com/red_rock_deli/"
                     className="button-primary"
                 >
                     <button>
                         {props.children} <span />
                     </button>
-                </ExternalLink>
+                </Link>
             )}
         </React.Fragment>
     );

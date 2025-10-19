@@ -1,3 +1,8 @@
+@use '../utils/mixins' as *;
+@use '../utils/variables' as *;
+
+
+
 @font-face {
     font-family: "Roboto";
     src: url("../fonts/subset-Roboto-Bold.woff2") format("woff2"),
@@ -81,6 +86,7 @@ h3 {
 
 h5 {
     font-size: 14px;
+
     em,
     i {
         font-weight: bold;

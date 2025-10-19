@@ -3,20 +3,23 @@ import FeedYourCuriosity from "../../img/lockups/feed-your-curiosity---sprites.p
 import SecretSuppersLockup from "../../img/lockups/secret-suppers-header-lockup-wide.png";
 import SecretSuppersLockupStacked from "../../img/lockups/secret-suppers-lockup--white.png";
 import { gsap, SteppedEase } from "gsap";
+
 import BlackBlockTitle from "./BlackBlockTitle";
+import { useGSAP } from "@gsap/react";
 // import ReactPlayer from "react-player";
 
 function Hero() {
-    const lockup = useRef(null);
+    const lockup = useRef();
+    const heroRef = useRef()
 
-    useEffect(() => {
+    useGSAP(() => {
         gsap.from(lockup.current, {
             duration: 1,
             y: "-100%",
             ease: SteppedEase.config(24),
             delay: 1.5,
         });
-    }, []);
+    }, [heroRef])
 
     const video_url =
         window.innerWidth < 768
@@ -26,7 +29,7 @@ function Hero() {
     // console.log(video_url);
 
     return (
-        <section className="Hero sr-item">
+        <section className="Hero sr-item" ref={heroRef}>
             <div
                 className="background-video full-width"
                 style={{

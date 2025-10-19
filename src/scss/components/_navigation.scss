@@ -1,3 +1,7 @@
+@use '../utils/mixins' as *;
+@use '../utils/variables' as *;
+@use '../utils/functions' as *;
+
 .Nav {
     width: 100%;
     height: $navHeightMobile;
@@ -44,6 +48,7 @@
             transition-timing-function: ease-out;
             transform-origin: 50% 50%;
         }
+
         &::before {
             top: 25px;
         }
@@ -78,15 +83,19 @@
                 transform: translateY(-20px);
 
                 transition-delay: 0.2s;
+
                 &:nth-child(2) {
                     transition-delay: 0.25s;
                 }
+
                 &:nth-child(3) {
                     transition-delay: 0.25s;
                 }
+
                 &:nth-child(4) {
                     transition-delay: 0.3s;
                 }
+
                 &:nth-child(5) {
                     transition-delay: 0.3s;
                 }
@@ -119,6 +128,7 @@
             &::after {
                 transform: rotate(-45deg) translateY(7px);
             }
+
             &::before {
                 transform: rotate(45deg) translateY(-7px);
             }
@@ -162,6 +172,7 @@
         .logo-container {
             .logo {
                 position: absolute;
+
                 img {
                     transform: translateX(50%) translateY(15px);
                     width: $logoWidth;
@@ -224,6 +235,7 @@
                 }
             }
         }
+
         ul {
             li.our-range-dropdown {
                 position: relative;

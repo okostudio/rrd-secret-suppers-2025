@@ -1,3 +1,7 @@
+@use '../utils/mixins' as *;
+@use '../utils/variables' as *;
+
+
 .MeetTheChefs {
     background: url("../../img/backgrounds/texture-rough-paint.jpg");
     background-position: top;
@@ -13,8 +17,7 @@
         // --
         // REVERSED OUT, white on black variation.
         // --
-        background: url("../../img/backgrounds/texture-light-grey-conctere-wall.jpg")
-            repeat top center;
+        background: url("../../img/backgrounds/texture-light-grey-conctere-wall.jpg") repeat top center;
         background-size: 500px 500px;
         padding: 120px 0;
 
@@ -146,20 +149,20 @@
         }
     }
 }
+
 // looking for a ticket
 .looking-for-a-ticket {
     margin: 0 20px;
     // width: 100%;
     height: 320px;
-    background: url("../../img/backgrounds/2019-06-20-Concrete-Playground-Red-Rock-Duncan-Kitti-Gould-3.jpg")
-        no-repeat;
+    background: url("../../img/backgrounds/2019-06-20-Concrete-Playground-Red-Rock-Duncan-Kitti-Gould-3.jpg") no-repeat;
     background-size: cover;
     background-position: center center;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    & > div {
+    &>div {
         background: rgba(0, 0, 0, 0.9);
         margin-top: 7%;
         padding: 30px;
@@ -181,7 +184,7 @@
     @include md {
         margin: 0 40px;
 
-        & > div {
+        &>div {
             padding: 40px 50px;
 
             .icon-ticket {
@@ -194,6 +197,7 @@
 
     @include lg {
         margin: 0 80px;
+
         h2 {
             font-size: 30px;
         }
@@ -217,11 +221,9 @@
     }
 
     .chefName {
-        background: linear-gradient(
-            0deg,
-            rgba(0, 0, 0, 0.9) 0%,
-            rgba(0, 0, 0, 0) 100%
-        );
+        background: linear-gradient(0deg,
+                rgba(0, 0, 0, 0.9) 0%,
+                rgba(0, 0, 0, 0) 100%);
         padding: 60px 20px 40px;
         width: 100%;
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet";
+// import { Helmet } from "react-helmet";
 import FrequentlyAskedQuestion from "./components/FrequentlyAskedQuestion";
 import ScrollReveal from "./utils/ScrollReveal";
 
@@ -52,13 +52,13 @@ const FAQs = () => {
                 </section>
             </ScrollReveal>
 
-            <Helmet>
+            {/* <Helmet>
                 <title>{"Red Rock Deli®"}</title>
                 <meta
                     name="description"
                     content={"Red Rock Deli® - Feed Your Curiosity™"}
                 />
-            </Helmet>
+            </Helmet> */}
         </div>
     );
 };

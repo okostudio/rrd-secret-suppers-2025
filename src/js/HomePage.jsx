@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { Helmet } from "react-helmet";
+// import { Helmet } from "react-helmet";
 
 import Hero from "./components/Hero";
 // import SecretSuppers from "./components/SecretSuppers";
@@ -8,6 +8,7 @@ import Hero from "./components/Hero";
 // import WhereToBuy from "./components/WhereToBuy";
 import ScrollReveal from "./utils/ScrollReveal";
 import LoadingAnimation from "./utils/LoaderAnimation";
+import InstagramFeed from "./components/InstagramFeed";
 
 const HomePage = () => {
     const DiscoverTheRange = React.lazy(() =>
@@ -22,13 +23,16 @@ const HomePage = () => {
         <ScrollReveal>
             <div className="page-wrapper home-page">
                 <Hero />
-                <Suspense fallback={<LoadingAnimation />}>
+                <Suspense>
                     <DiscoverTheRange showCanvas={false} />
                 </Suspense>
-                <Suspense fallback={<LoadingAnimation />}>
+                <Suspense>
                     <SecretSuppers />
                 </Suspense>
-                <Suspense fallback={<LoadingAnimation />}>
+                <Suspense>
+                    <InstagramFeed count={3} />
+                </Suspense>
+                <Suspense>
                     <WhereToBuy />
                 </Suspense>
 
@@ -53,7 +57,7 @@ const HomePage = () => {
                     <meta
                         property="og:image"
                         content={
-                            "https://red-rock-deli-2020.netlify.com/images/backgorund-secret-suppers.jpg"
+                            "https://rrd-secret-suppers-2025.vercel.app//images/backgorund-secret-suppers.jpg"
                         }
                     />
                 </Helmet> */}

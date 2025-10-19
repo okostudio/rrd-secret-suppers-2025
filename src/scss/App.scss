@@ -1,31 +1,31 @@
-@import "utils/variables";
-@import "utils/functions";
-@import "utils/mixins";
-@import "utils/loading-animation";
+@use "utils/variables" as *;
+@use "utils/functions" as *;
+@use "utils/mixins" as *;
+@use "utils/loading-animation" as *;
 
-@import "base/reset";
-@import "base/typography";
+@use "base/reset";
+@use "base/typography";
 
-@import "components/buttons";
-@import "components/hero";
-@import "components/secret-suppers";
-@import "components/event-info";
-@import "components/meet-the-chefs";
-@import "components/chef-bio";
-@import "components/discover-the-range";
-@import "components/where-to-buy";
-@import "components/insta-feed";
-@import "components/page-transition";
-@import "components/navigation";
-@import "components/wide-footer-image";
-@import "components/footer";
+@use "components/buttons";
+@use "components/hero";
+@use "components/secret-suppers";
+@use "components/event-info";
+@use "components/meet-the-chefs";
+@use "components/chef-bio";
+@use "components/discover-the-range";
+@use "components/where-to-buy";
+@use "components/insta-feed";
+@use "components/page-transition";
+@use "components/navigation";
+@use "components/wide-footer-image";
+@use "components/footer";
 
-@import "pages/legal_pages";
-@import "pages/our_range";
+@use "pages/legal_pages";
+@use "pages/our_range";
 
-@import "layout/grid";
-@import "layout/forms";
-@import "layout/404";
+@use "layout/grid";
+@use "layout/forms";
+@use "layout/error404";
 
 body {
     margin: 0;

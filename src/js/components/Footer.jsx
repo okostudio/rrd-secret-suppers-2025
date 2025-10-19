@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ExternalLink } from "react-external-link";
+// import { Link } from "react-external-link";
 import Logo from "../../img/logos/rrd-logo-01.svg";
 // import EnquiryForm from "./EnquiryForms";
 
@@ -14,18 +14,18 @@ function Footer() {
                         <div className="lockup" />
                     </div>
                     <div className="right">
-                        <ExternalLink
+                        <Link
                             className="facebook"
                             href="https://www.facebook.com/RedRockDeli/"
                         >
                             <span />
-                        </ExternalLink>
-                        <ExternalLink
+                        </Link>
+                        <Link
                             className="instagram"
                             href="https://www.instagram.com/red_rock_deli/"
                         >
                             <span />
-                        </ExternalLink>
+                        </Link>
                     </div>
                 </div>
                 <div className="middle">
@@ -57,13 +57,13 @@ function Footer() {
                 <div className="bottom">
                     <div className="left">
                         <Link to="/faq/">FAQs</Link>|
-                        <ExternalLink href="https://www.smiths.com.au/assets/PepsiCo-Australian-Privacy-and-Credit-Reporting-Policy-December-2014-72bf6e0725d535527672d7a6b67309aa7feda4a4207e8e87864491f249e29f9c.pdf">
+                        <Link href="https://www.smiths.com.au/assets/PepsiCo-Australian-Privacy-and-Credit-Reporting-Policy-December-2014-72bf6e0725d535527672d7a6b67309aa7feda4a4207e8e87864491f249e29f9c.pdf">
                             Privacy Policy
-                        </ExternalLink>
+                        </Link>
                         |
-                        <ExternalLink href="http://www.pepsico.com.au/terms/">
+                        <Link href="http://www.pepsico.com.au/terms/">
                             Terms of Use
-                        </ExternalLink>
+                        </Link>
                     </div>
                     <div className="right">
                         <p>&copy;Red Rock Deli™ 2020</p>
@@ -80,7 +80,7 @@ const ContactItem = props => {
     return (
         <React.Fragment>
             {props.link ? (
-                <ExternalLink href={props.link} className="item">
+                <Link href={props.link} className="item">
                     <div className={"icon " + props.iconClass}>
                         <span className="email" />
                     </div>
@@ -91,7 +91,7 @@ const ContactItem = props => {
                             }}
                         />
                     </div>
-                </ExternalLink>
+                </Link>
             ) : (
                 <div className="item">
                     <div className={"icon " + props.iconClass}>

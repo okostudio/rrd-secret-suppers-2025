@@ -1,3 +1,7 @@
+@use '../utils/mixins' as *;
+@use '../utils/variables' as *;
+
+
 .Instagram {
     padding: 40px 0;
 
@@ -31,11 +35,13 @@
                     width: 70vw;
                     padding-right: 5vw;
                     line-height: 0;
+
                     // box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.33);
                     // margin: 15px 0;
                     .loader-container {
                         z-index: 1;
                     }
+
                     img {
                         width: 100%;
                         position: relative;
@@ -54,16 +60,19 @@
                     }
                 }
             }
+
             &.feed-count-3 {
                 .feed {
                     width: 235vw;
                 }
             }
+
             &.feed-count-6 {
                 .feed {
                     width: 445vw;
                 }
             }
+
             &.feed-count-9 {
                 .feed {
                     width: 655vw;
@@ -98,6 +107,7 @@
                         margin: 15px 0;
                     }
                 }
+
                 &.feed-count-3,
                 &.feed-count-6,
                 &.feed-count-9 {
@@ -108,6 +118,7 @@
             }
         }
     }
+
     @include md {
         .container {
             .feed-holder {
@@ -124,6 +135,7 @@
     a {
         cursor: pointer;
     }
+
     .showMore {
         @include flexCenter;
     }
@@ -189,6 +201,7 @@
                 div {
                     padding: 15px;
                     color: black;
+
                     a {
                         color: $blue;
                     }

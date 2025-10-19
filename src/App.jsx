@@ -15,6 +15,9 @@ import OurRange from "./js/OurRange";
 // import history from "./js/history";
 import SecretSuppersPage from "./js/SecretSuppersPage";
 // import GoogleTagManager from "./js/utils/GoogleTagManager";
+import { Analytics } from "@vercel/analytics/react"
+
+
 
 function App() {
     const [wrapperClass, setWrapperClass] = useState("wrapper");
@@ -77,6 +80,7 @@ function App() {
                     <ScrollReveal pageIsLoading={pageLoading}>
                         <Footer />
                     </ScrollReveal>
+                    <Analytics />
                 </>
 
 

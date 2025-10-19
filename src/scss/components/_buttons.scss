@@ -1,3 +1,7 @@
+@use '../utils/mixins' as *;
+@use '../utils/variables' as *;
+@use '../utils/functions' as *;
+
 .button-primary {
     button {
         position: relative;
@@ -90,6 +94,7 @@
 
     &:hover {
         background-color: $creamHover;
+
         &::after {
             animation: arrowRight 0.3s ease-in-out;
         }

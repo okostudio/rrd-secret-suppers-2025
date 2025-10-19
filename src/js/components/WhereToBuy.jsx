@@ -2,9 +2,10 @@ import React from "react";
 import logo1 from "../../img/logos/logo-iga-white.png";
 import logo2 from "../../img/logos/logo-woolworths-white.png";
 import logo3 from "../../img/logos/logo-coles-white.png";
-import { ExternalLink } from "react-external-link";
+import { Link } from "react-router-dom";
+// import { ExternalLink } from "react-external-link";
 
-const WhereToBuy = props => {
+const WhereToBuy = () => {
     return (
         <section className="WhereToBuy">
             <div className="container">
@@ -43,8 +44,8 @@ export default WhereToBuy;
 const Store = props => {
     console.log("props.href", props.href);
     return (
-        <ExternalLink className="store" href={props.href}>
+        <Link className="store" href={props.href}>
             <img src={props.logoUrl} alt={props.alt} />
-        </ExternalLink>
+        </Link>
     );
 };

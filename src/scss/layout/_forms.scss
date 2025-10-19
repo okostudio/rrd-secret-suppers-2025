@@ -1,3 +1,7 @@
+@use '../utils/mixins' as *;
+@use '../utils/variables' as *;
+@use '../utils/functions' as *;
+
 .enquiryForm {
     .enquity-type-selection {
         border-bottom: 2px solid rgba(255, 255, 255, 0.1);
@@ -14,9 +18,11 @@
     .MuiTypography-colorTextSecondary,
     .MuiFormLabel-root {
         color: $halfWhite;
+
         &.Mui-focused {
             color: $white;
         }
+
         &.Mui-error {
             color: #f44336;
         }
@@ -24,17 +30,21 @@
 
     .MuiInputBase-root {
         color: $white;
+
         .Mui-focused {
             color: $white;
         }
     }
+
     .MuiInput-underline {
         &:before {
             border-bottom-color: $halfWhite;
         }
+
         &:after {
             border-bottom-color: $white;
         }
+
         &:hover {
             &:not(.Mui-Disabled) {
                 &:before {
@@ -79,6 +89,7 @@
         padding: 4px;
         margin-right: 20px;
         margin-bottom: 40px;
+
         &.full-width {
             width: 100%;
         }
@@ -86,14 +97,17 @@
         &.short {
             width: 50%;
         }
+
         &.date input {
             color: $halfWhite;
         }
     }
+
     label,
     .MuiFormControlLabel-label {
         font-size: 14px;
     }
+
     .input {
         font-size: 16px;
     }
@@ -135,6 +149,7 @@
 
     .button-dropdown {
         position: relative;
+
         ul {
             position: absolute;
             overflow: hidden;

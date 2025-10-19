@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { Helmet } from "react-helmet";
+// import { Helmet } from "react-helmet";
 
 import Hero from "./components/Hero";
 // import SecretSuppers from "./components/SecretSuppers";
@@ -41,7 +41,7 @@ const HomePage = () => {
                     <InstaFeed />
                 </Suspense>
 
-                <Helmet>
+                {/* <Helmet>
                     <title>{"Red Rock Deli®"}</title>
                     <meta
                         name="description"
@@ -65,7 +65,7 @@ const HomePage = () => {
                             "https://red-rock-deli-2020.netlify.com/images/backgorund-secret-suppers.jpg"
                         }
                     />
-                </Helmet>
+                </Helmet> */}
             </div>
         </ScrollReveal>
     );

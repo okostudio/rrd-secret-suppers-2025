@@ -1,4 +1,7 @@
-// hero video / img
+@use '../utils/mixins' as *;
+@use '../utils/variables' as *;
+@use '../utils/functions' as *;
+
 .Hero {
     width: 100%;
     height: 65vh;

@@ -1,3 +1,7 @@
+@use '../utils/mixins' as *;
+@use '../utils/variables' as *;
+@use '../utils/functions' as *;
+
 .DiscoverTheRange {
     margin: 0;
     padding: 120px 0px;
@@ -58,6 +62,7 @@
 
             &.next {
                 right: 0;
+
                 &:hover {
                     svg {
                         animation: arrowRight 0.3s ease-in-out;
@@ -67,6 +72,7 @@
 
             &.previous {
                 left: 0;
+
                 &:hover {
                     svg {
                         animation: arrowLeft 0.3s ease-in-out;

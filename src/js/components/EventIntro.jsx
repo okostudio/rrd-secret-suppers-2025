@@ -1,6 +1,7 @@
 import React from "react";
 import ButtonPrimary from "./ButtonPrimary";
-import { ExternalLink } from "react-external-link";
+import { Link } from "react-router-dom";
+// import { ExternalLink } from "react-external-link";
 
 const EventInfo = props => {
     return (
@@ -39,12 +40,12 @@ const ContactItem = props => {
     return (
         <React.Fragment>
             {props.link ? (
-                <ExternalLink href={props.link} className="item">
+                <Link href={props.link} className="item">
                     <div className={"icon " + props.iconClass} />
                     <div className="description">
                         <p>{props.children}</p>
                     </div>
-                </ExternalLink>
+                </Link>
             ) : (
                 <div className="item">
                     <div className={"icon " + props.iconClass} />

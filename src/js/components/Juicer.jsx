@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import JuicerFeed from "react-juicer-feed";
-import { ExternalLink } from "react-external-link";
+// import { ExternalLink } from "react-external-link";
 import LoadingAnimation from "../utils/LoaderAnimation";
+import { Link } from "react-router-dom";
 
 const Juicer = (props) => {
     const [feedData, setFeedData] = useState([]);
@@ -78,7 +79,7 @@ const Juicer = (props) => {
                 <div className="feed">
                     {feedData.slice(0, feedCount).map((item, index) => {
                         return (
-                            <ExternalLink
+                            <Link
                                 className="item"
                                 key={"feed-item-" + index}
                                 href={item.href}
@@ -86,7 +87,7 @@ const Juicer = (props) => {
                                 <LoadingAnimation />
                                 <img src={item.source} alt={item.message} />
                                 <h5>{formatTime(item.time)}</h5>
-                            </ExternalLink>
+                            </Link>
                         );
                     })}
                 </div>

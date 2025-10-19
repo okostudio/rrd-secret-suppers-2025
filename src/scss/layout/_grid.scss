@@ -1,3 +1,7 @@
+@use '../utils/mixins' as *;
+@use '../utils/variables' as *;
+@use '../utils/functions' as *;
+
 section {
     visibility: hidden;
     position: relative;
@@ -38,6 +42,7 @@ section {
         margin: 0 auto;
         text-align: center;
     }
+
     &.centered600 {
         max-width: 600px;
         margin: 0 auto;
@@ -45,6 +50,7 @@ section {
     }
 
     &.white {
+
         p,
         h3,
         h2 {
@@ -53,6 +59,7 @@ section {
     }
 
     &.black {
+
         p,
         h3,
         h2 {
