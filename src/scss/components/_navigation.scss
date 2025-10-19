@@ -1,0 +1,282 @@
+.Nav {
+    width: 100%;
+    height: $navHeightMobile;
+    background: black;
+    position: fixed;
+    top: 0;
+    z-index: 3000;
+
+    .logo-container {
+        position: relative;
+        width: 50%;
+
+        .logo {
+            position: absolute;
+            right: 0;
+
+            img {
+                width: $logoWidth * 0.6;
+                transform: translateX(50%) translateY(10px);
+                transition: all 0.2s;
+                transition-timing-function: ease-in-out;
+            }
+        }
+    }
+
+    .hamburger {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        right: 30px;
+        top: 10px;
+
+        &::after,
+        &::before {
+            content: " ";
+            width: 24px;
+            height: 1px;
+            position: absolute;
+            background: white;
+            left: 7px;
+            top: 15px;
+
+            transition: transform 0.2s;
+            transition-timing-function: ease-out;
+            transform-origin: 50% 50%;
+        }
+        &::before {
+            top: 25px;
+        }
+    }
+
+    nav {
+        position: absolute;
+        right: 0px;
+        width: 100vw;
+        height: 100vh;
+        background: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        transform: translateY(-100vh);
+
+        ul {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: $navHeight * 0.5;
+            height: 300px;
+
+            li {
+                position: relative;
+                opacity: 0;
+                transition-property: transform, opacity;
+                transition-duration: 0.2s, 0.1s;
+                transition-timing-function: ease-out;
+                transform: translateY(-20px);
+
+                transition-delay: 0.2s;
+                &:nth-child(2) {
+                    transition-delay: 0.25s;
+                }
+                &:nth-child(3) {
+                    transition-delay: 0.25s;
+                }
+                &:nth-child(4) {
+                    transition-delay: 0.3s;
+                }
+                &:nth-child(5) {
+                    transition-delay: 0.3s;
+                }
+
+                &:nth-child(2),
+                &:nth-child(4) {
+                    transform: scaleX(0);
+                }
+
+                .divider {
+                    width: 40px;
+                    height: 1px;
+                    background: white;
+                }
+
+                a,
+                .a {
+                    font-family: $tradeGothic;
+                    font-size: 36px;
+                    color: $white;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    // Nav is avtive
+    &.isActive {
+        .hamburger {
+            &::after {
+                transform: rotate(-45deg) translateY(7px);
+            }
+            &::before {
+                transform: rotate(45deg) translateY(-7px);
+            }
+        }
+
+        .logo-container {
+            .logo {
+                img {
+                    width: $logoWidth * 0.4;
+                    transform: translateX(50%) translateY(10px);
+                }
+            }
+        }
+
+        nav {
+            transform: translateY(0);
+            transition: transform 0.2s;
+            transition-delay: 0.1s;
+            transition-timing-function: ease-in-out;
+
+            ul {
+                li {
+                    opacity: 1;
+                    transform: translateY(0px);
+
+                    &:nth-child(2),
+                    &:nth-child(4) {
+                        transform: scaleX(1);
+                    }
+                }
+            }
+        }
+    }
+
+    // -----------------------------------------------------
+    // Switch Nav to desktop mode > 992px width
+    // -----------------------------------------------------
+    @include lg {
+        height: $navHeight;
+
+        .logo-container {
+            .logo {
+                position: absolute;
+                img {
+                    transform: translateX(50%) translateY(15px);
+                    width: $logoWidth;
+                }
+            }
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        nav {
+            display: flex;
+            position: absolute;
+            right: 50px;
+            height: 100%;
+            width: auto;
+            transform: translateY(0);
+            user-select: none;
+            overflow: visible;
+
+            ul {
+                display: flex;
+                flex-flow: row;
+                align-items: center;
+                justify-content: space-between;
+                height: 100%;
+                margin-top: 0;
+
+                li {
+                    opacity: 1;
+                    transform: translateY(0px);
+
+                    &:nth-child(2),
+                    &:nth-child(4) {
+                        transform: scaleX(1);
+                    }
+
+                    .divider {
+                        width: 2px;
+                        height: 12px;
+                        margin: 0 10px;
+                    }
+
+                    a,
+                    .a {
+                        font-family: $tradeGothic;
+                        font-size: 21px;
+                        margin: 0;
+                        padding: 8px 10px;
+                        background: rgba(255, 255, 255, 0);
+                        border-radius: 2px;
+                        transition: background-color 0.15s ease-out;
+
+                        &:hover {
+                            padding: 8px 10px;
+                            background: rgba(255, 255, 255, 0.2);
+                        }
+                    }
+                }
+            }
+        }
+        ul {
+            li.our-range-dropdown {
+                position: relative;
+
+                .dropdown {
+                    position: absolute;
+                    transition: all 0.2s ease-out;
+                    overflow: hidden;
+                    padding-top: 10px;
+                    height: 0;
+                    width: 220px;
+                    background: $black;
+
+                    a {
+                        position: relative;
+                        display: block !important;
+                        color: white;
+                        padding: 8px 50px;
+                        width: 100% !important;
+
+                        &.label {
+                            text-align: center;
+                            border-bottom: 2px solid white;
+                        }
+
+                        &:not(.label) {
+                            background: rgba(0, 0, 0, 0.75);
+                            user-select: none;
+                            border-bottom: 1px solid $halfWhite;
+                            position: relative;
+                            background-image: url("../../img/ui/chevron-white.svg");
+                            background-repeat: no-repeat;
+                            background-size: 15px 15px;
+                            background-position: 30px center;
+                            padding: 10px 20px 10px 70px;
+
+                            transition: all 0.2s ease-out;
+
+                            &:hover {
+                                border-color: $white;
+                                background-position: 34px center;
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    .dropdown {
+                        height: auto;
+                        transition: height 0.2s ease-out;
+                    }
+                }
+            }
+        }
+    }
+}

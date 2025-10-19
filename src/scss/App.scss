@@ -1,0 +1,91 @@
+@import "utils/variables";
+@import "utils/functions";
+@import "utils/mixins";
+@import "utils/loading-animation";
+
+@import "base/reset";
+@import "base/typography";
+
+@import "components/buttons";
+@import "components/hero";
+@import "components/secret-suppers";
+@import "components/event-info";
+@import "components/meet-the-chefs";
+@import "components/chef-bio";
+@import "components/discover-the-range";
+@import "components/where-to-buy";
+@import "components/insta-feed";
+@import "components/page-transition";
+@import "components/navigation";
+@import "components/wide-footer-image";
+@import "components/footer";
+
+@import "pages/legal_pages";
+@import "pages/our_range";
+
+@import "layout/grid";
+@import "layout/forms";
+@import "layout/404";
+
+body {
+    margin: 0;
+    background: $grey;
+    scroll-behavior: smooth;
+}
+
+body,
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    margin-top: 60px;
+    background: $black;
+    animation: fadeIn 0.5s ease-in;
+
+    @include lg {
+        margin-top: 90px;
+    }
+
+    .stone-wall-bakground {
+        margin: 0;
+        background: url("../img/backgrounds/texture-light-grey-conctere-wall.jpg") repeat top center;
+        background-size: 500px 500px;
+    }
+}
+
+.black-block {
+    padding: 20px 0;
+    width: 100%;
+    background: $black;
+    position: relative;
+    color: white;
+    text-align: center;
+
+    h3 {
+        font-size: 24px;
+        line-height: 1.1;
+    }
+
+    .scroll-prompt {
+        &:after {
+            background: $black;
+        }
+    }
+
+    @include lg {
+        h3 {
+            font-size: 30px;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

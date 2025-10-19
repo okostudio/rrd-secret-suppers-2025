@@ -1,0 +1,43 @@
+@keyframes arrowRight {
+  0% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+
+  45% {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+
+  55% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes arrowLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+
+  45% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+
+  55% {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

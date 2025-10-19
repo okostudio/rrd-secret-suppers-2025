@@ -1,0 +1,220 @@
+.Instagram {
+    padding: 40px 0;
+
+    .container {
+        position: relative;
+        padding: 0 0 20px 0;
+
+        .feed-holder {
+            position: relative;
+
+            // background: red;
+            width: 100%;
+            height: 70vw;
+            overflow-x: scroll;
+
+            margin-top: 20px;
+
+            .feed {
+                // display: flex;
+                // flex-flow: row;
+                // flex-wrap: wrap;
+                // justify-content: space-between;
+                line-height: 0;
+                padding-left: 15vw;
+                position: absolute;
+                width: 445vw;
+
+                .item {
+                    display: inline-block;
+                    position: relative;
+                    width: 70vw;
+                    padding-right: 5vw;
+                    line-height: 0;
+                    // box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.33);
+                    // margin: 15px 0;
+                    .loader-container {
+                        z-index: 1;
+                    }
+                    img {
+                        width: 100%;
+                        position: relative;
+                        z-index: 2;
+                    }
+
+                    h5 {
+                        font-family: $tradeGothic;
+                        font-weight: bold;
+                        color: $white;
+                        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.33);
+                        position: absolute;
+                        bottom: 10px;
+                        left: 10px;
+                        z-index: 3;
+                    }
+                }
+            }
+            &.feed-count-3 {
+                .feed {
+                    width: 235vw;
+                }
+            }
+            &.feed-count-6 {
+                .feed {
+                    width: 445vw;
+                }
+            }
+            &.feed-count-9 {
+                .feed {
+                    width: 655vw;
+                }
+            }
+        }
+    }
+
+    @include sm {
+        .container {
+            padding: 0 20px 20px 20px;
+
+            .feed-holder {
+                overflow-x: hidden;
+                height: auto;
+
+                .feed {
+                    position: relative;
+                    display: flex;
+                    flex-flow: row;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    line-height: 0;
+                    width: 100%;
+                    padding-left: 0;
+
+                    .item {
+                        position: relative;
+                        width: 48%;
+                        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.33);
+                        padding-right: 0;
+                        margin: 15px 0;
+                    }
+                }
+                &.feed-count-3,
+                &.feed-count-6,
+                &.feed-count-9 {
+                    .feed {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    @include md {
+        .container {
+            .feed-holder {
+                .feed {
+                    .item {
+                        width: 32%;
+                        margin: 15px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    a {
+        cursor: pointer;
+    }
+    .showMore {
+        @include flexCenter;
+    }
+}
+
+.InstaFeed {
+    margin: 0;
+    padding: 80px 0;
+
+    background-color: #c7ccd0;
+    background-image: url("../../img/backgrounds/instafeed-background.jpg");
+    background-size: cover;
+    background-position: top;
+    overflow: hidden;
+
+    &.no-background {
+        background: none;
+    }
+
+    .content {
+        max-width: 700px;
+        margin: 0 auto 40px;
+        text-align: center;
+        color: black;
+
+        h2 {
+            margin-bottom: 20px;
+            color: black;
+        }
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    .feed-holder {
+        position: relative;
+        overflow-x: scroll;
+        width: 100%;
+
+        .feed {
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+            max-width: 1120px;
+            width: 300%;
+            padding: 0 20px;
+            overflow-x: unset;
+
+            a.item {
+                width: calc(33.33% - 80px / 3);
+
+                background-color: white;
+                box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+                margin: 30px 0;
+
+                img {
+                    width: 100%;
+                }
+
+                div {
+                    padding: 15px;
+                    color: black;
+                    a {
+                        color: $blue;
+                    }
+                }
+            }
+        }
+    }
+
+    .showMore {
+        @include flexCenter;
+    }
+
+    @include md {
+        .feed-holder {
+            padding: 0 40px;
+        }
+    }
+
+    @include lg {
+        .feed-holder {
+            padding: 0 80px;
+
+            .feed {
+                width: auto;
+                overflow-x: unset;
+            }
+        }
+    }
+}

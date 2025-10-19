@@ -1,0 +1,184 @@
+.enquiryForm {
+    .enquity-type-selection {
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+
+        .hide-mobile {
+            display: none;
+        }
+    }
+
+    // -----------------------------------------
+    // MATERIAL UI Overrides:
+    // -----------------------------------------
+
+    .MuiTypography-colorTextSecondary,
+    .MuiFormLabel-root {
+        color: $halfWhite;
+        &.Mui-focused {
+            color: $white;
+        }
+        &.Mui-error {
+            color: #f44336;
+        }
+    }
+
+    .MuiInputBase-root {
+        color: $white;
+        .Mui-focused {
+            color: $white;
+        }
+    }
+    .MuiInput-underline {
+        &:before {
+            border-bottom-color: $halfWhite;
+        }
+        &:after {
+            border-bottom-color: $white;
+        }
+        &:hover {
+            &:not(.Mui-Disabled) {
+                &:before {
+                    border-bottom-color: $threeQtrWhite;
+                }
+            }
+        }
+    }
+
+    .MuiCheckbox-colorSecondary.Mui-checked,
+    .MuiIconButton-colorSecondary {
+        color: $white;
+    }
+
+    .MuiCheckbox-root {
+        color: $halfWhite;
+
+        &:hover {
+            color: $threeQtrWhite;
+        }
+    }
+
+    .MuiFormControl-root {
+        width: calc(100%);
+    }
+
+    form {
+        margin: 40px 0;
+
+        .form-group {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
+    .input-wrapper {
+        // display: inline-block;
+        position: relative;
+
+        padding: 4px;
+        margin-right: 20px;
+        margin-bottom: 40px;
+        &.full-width {
+            width: 100%;
+        }
+
+        &.short {
+            width: 50%;
+        }
+        &.date input {
+            color: $halfWhite;
+        }
+    }
+    label,
+    .MuiFormControlLabel-label {
+        font-size: 14px;
+    }
+    .input {
+        font-size: 16px;
+    }
+
+    .textarea-wrapper {
+        position: relative;
+        width: 100%;
+        margin-bottom: 40px;
+
+        textarea {
+            margin-top: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid $halfWhite;
+            width: calc(100% - 20px);
+            background: none;
+            color: white;
+            outline: 0;
+            font-size: 1em;
+            padding: 8px;
+            transition: border-bottom-color 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+
+            &:hover {
+                border-bottom: 2px solid $threeQtrWhite;
+            }
+
+            &:focus {
+                border-bottom: 2px solid $white;
+            }
+        }
+    }
+
+    .checkbox-wrapper {
+        margin-bottom: 60px;
+
+        .MuiFormControlLabel-root {
+            margin-bottom: 10px;
+        }
+    }
+
+    .button-dropdown {
+        position: relative;
+        ul {
+            position: absolute;
+            overflow: hidden;
+            height: 130px;
+            width: 100%;
+            transition: all 0.2s ease-out;
+            z-index: 2;
+
+            &.collapsed {
+                height: 0;
+            }
+
+            li {
+                background: $black;
+                user-select: none;
+                padding: 20px 50px;
+                border-bottom: 1px solid $halfWhite;
+                position: relative;
+                background-image: url("../../img/ui/chevron-white.svg");
+                background-repeat: no-repeat;
+                background-size: 15px 15px;
+                background-position: 8px center;
+
+                transition: all 0.2s ease-out;
+
+                &:hover {
+                    border-color: $white;
+                    background-position: 12px center;
+                }
+            }
+        }
+    }
+
+    @include md {
+        .hide-mobile {
+            display: inline-block;
+        }
+    }
+
+    @include lg {
+        form {
+            .form-group {
+                flex-direction: row;
+            }
+        }
+    }
+}

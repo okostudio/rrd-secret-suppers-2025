@@ -1,0 +1,125 @@
+.legal {
+    h1 {
+        color: $black;
+        margin-bottom: 40px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid $black;
+    }
+    section {
+        margin: 0;
+        padding: 60px 20px;
+
+        background-color: #c7ccd0;
+        background-image: url("../../img/backgrounds/instafeed-background.jpg");
+        background-size: 100%;
+        background-position: top;
+
+        .container {
+            ol,
+            ul {
+                list-style: decimal;
+                margin-left: 10px;
+                font-weight: bold;
+
+                li {
+                    padding-left: 10px;
+                    margin-bottom: 10px;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+
+    .item {
+        .plus {
+            position: absolute;
+            right: 0;
+            top: 30px;
+            width: 40px;
+            height: 40px;
+            transition: background-color 0.2s ease-out;
+            border-radius: 50%;
+
+            &::after,
+            &::before {
+                width: 20px;
+                height: 3px;
+                border-radius: 2px;
+                background-color: black;
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(360deg);
+                transition: transform 0.35s ease-in-out;
+            }
+            &::before {
+                transform: translate(-50%, -50%) rotate(90deg);
+            }
+        }
+
+        &.expanded {
+            .plus {
+                &::after,
+                &::before {
+                    transform: translate(-50%, -50%) rotate(180deg);
+                }
+            }
+        }
+
+        &:hover {
+            .plus {
+                background: rgba(255, 255, 255, 0.5);
+            }
+        }
+    }
+
+    &.faqs {
+        section {
+            .container {
+                .item {
+                    cursor: pointer;
+                    position: relative;
+                    padding: 15px 50px 15px 0px;
+                    border-bottom: 1px solid $black;
+
+                    h3 {
+                        text-transform: none;
+                        margin: 5px 0;
+                        font-size: 24px;
+                        letter-spacing: -0.025em;
+                    }
+
+                    p {
+                    }
+                }
+            }
+        }
+    }
+
+    @include lg {
+        section {
+            margin: 0;
+            padding: 120px 80px;
+        }
+
+        &.faqs {
+            section {
+                .container {
+                    .item {
+                        padding: 20px 100px 20px 0px;
+
+                        h3 {
+                            text-transform: none;
+                            margin: 5px 0;
+                            font-size: 30px;
+                        }
+
+                        p {
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

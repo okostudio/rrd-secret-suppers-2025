@@ -1,0 +1,579 @@
+.our-range {
+    position: relative;
+    .hidden {
+        display: none;
+    }
+
+    .blur-container {
+        transition: filter 0.3s ease-out;
+        &.blurred {
+            filter: blur(5px);
+        }
+    }
+
+    .modal {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        display: none;
+        pointer-events: none;
+        transition: all 0.3s ease-out;
+
+        &.isActive {
+            @include flexCenter;
+            align-items: flex-start;
+            background-color: rgba(0, 0, 0, 0.2);
+            pointer-events: all;
+        }
+
+        .info {
+            margin-top: 50px;
+            width: calc(100% - 80px);
+            max-width: 280px;
+
+            .black-box {
+                background: $black;
+                color: $white;
+                border: 2px solid $white;
+                box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+                margin-bottom: 20px;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            .header,
+            .copy {
+                padding: 10px;
+            }
+
+            .header {
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 20px;
+                    height: 20px;
+                    background: url("../../img/ui/close.svg") no-repeat;
+                    background-size: cover;
+                    transition: opacity 0.2s ease-out;
+                }
+
+                &:hover {
+                    &::after {
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+    }
+
+    .icons {
+        margin-top: 40px;
+        position: relative;
+        width: 100%;
+        @include flexCenter;
+        align-items: flex-start;
+
+        .item {
+            position: relative;
+            text-align: center;
+            width: 120px;
+
+            .label {
+                font-size: 12px;
+                color: $white;
+                font-weight: bold;
+            }
+
+            .icon {
+                width: 50px;
+                height: 50px;
+                margin: 15px;
+                background: $midGrey;
+                border-radius: 50%;
+                margin: 0 auto;
+                margin-bottom: 10px;
+                @include flexCenter;
+                position: relative;
+                transition: background-color 0.3s ease-in;
+
+                svg {
+                    width: 50%;
+                    height: 50%;
+                    fill: $white;
+                    transition: all 0.3s ease-out;
+                    content: "";
+                }
+
+                &:hover,
+                &.isActive {
+                    background: $white;
+                    svg {
+                        fill: $midGrey;
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    }
+
+    section {
+        // visibility: visible;
+    }
+
+    .range-nav {
+        margin: 0;
+        background: $midGrey;
+
+        .container {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+
+            .nav-item {
+                width: 33%;
+                margin: 0px;
+                position: relative;
+                cursor: pointer;
+
+                img {
+                    width: 100%;
+                    margin-bottom: 5px;
+                    filter: drop-shadow(0 12px 15px rgba(255, 255, 255, 0.2));
+                    transform: scale(0.8);
+                    transform-origin: 50% 100%;
+                    transition: transform 0.2s ease-out;
+                }
+                text-align: center;
+
+                h3 {
+                    font-size: 20px;
+                    line-height: 0.9;
+                    color: $halfWhite;
+                    transform: scale(0.8);
+                    transition: all 0.2s ease-out;
+                }
+
+                &:hover,
+                &.isActive {
+                    img {
+                        transform: scale(1);
+                    }
+
+                    h3 {
+                        transform: scale(1);
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        @include md {
+            .container {
+                flex-wrap: unset;
+                padding: 30px 0;
+
+                .nav-item {
+                    width: 17%;
+
+                    &::after {
+                        content: "";
+                        width: 20px;
+                        height: 20px;
+                        position: absolute;
+                        background: $midGrey;
+                        top: 0;
+                        left: 50%;
+                        opacity: 0;
+                        transform: translate(-50%, -20px) rotate(45deg);
+                        transition: all 0.4s ease-in-out;
+                    }
+                    &.isActive {
+                        &::after {
+                            opacity: 1;
+                            transform: translate(-50%, -38px) rotate(45deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ======================================
+.our-range,
+.home-page {
+    .DiscoverTheRange {
+        min-height: 400px;
+        height: calc(100% - 150px);
+        padding-top: 0;
+        padding-bottom: 40px;
+
+        .canvas-container {
+            overflow: hidden;
+            position: relative;
+            display: block;
+            padding-top: 400px;
+            pointer-events: all;
+
+            canvas.particle-system {
+                width: 1280px;
+                height: 1200px;
+                position: absolute;
+                top: 0px;
+                left: 50%;
+                transform-origin: 50% 0%;
+                transform: translateX(-50%) scale(0.65);
+
+                // background: rgba(255, 0, 0, 0.4);
+            }
+        }
+
+        .description {
+            display: block;
+            position: relative;
+            padding: 0 20px;
+            margin-top: 50px;
+            width: 100%;
+            z-index: 2;
+            text-align: center;
+            max-width: 700px;
+            text-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+
+            h1 {
+                color: $white;
+                line-height: 1;
+                margin-bottom: 15px;
+            }
+            p {
+                color: $white;
+                margin-bottom: 15px;
+            }
+            p.large {
+                font-size: 19px;
+                line-height: 1.2;
+            }
+        }
+
+        @include sm {
+            .description {
+                margin-top: 50px;
+                h1 {
+                    line-height: 1.1;
+                }
+            }
+
+            .canvas-container {
+                padding-top: 450px;
+
+                canvas.particle-system {
+                    top: -30px;
+                    transform: translateX(-50%) scale(0.8);
+                }
+            }
+        }
+
+        @include md {
+            .description {
+                padding-top: 40px;
+                max-width: 400px;
+                min-height: 520px;
+                width: 45%;
+                h1 {
+                    letter-spacing: -1px;
+                }
+
+                p.large {
+                    font-size: 22px;
+                }
+            }
+
+            .canvas-container {
+                padding: 0 80px 50px 0;
+                overflow: visible;
+                margin-top: 0px;
+                display: flex;
+                flex-flow: row;
+                justify-content: flex-end;
+                canvas.particle-system {
+                    top: 0px;
+                    left: 27%;
+                    transform: translateX(-50%) scale(0.9);
+                }
+            }
+        }
+
+        @include lg {
+            // padding: 40px 0;
+            .description {
+                margin-top: 0px;
+                padding-top: 100px;
+                max-width: 450px;
+                min-height: 650px;
+                width: 45%;
+                p.large {
+                    font-size: 22px;
+                }
+            }
+
+            .canvas-container {
+                max-width: 1280px;
+                margin: 0 auto;
+                padding: 0 100px 0 0;
+
+                canvas.particle-system {
+                    left: 30%;
+                    top: -50px;
+                    transform: translateX(-50%) scale(1);
+                }
+            }
+        }
+    }
+    // ======================================
+    .controls {
+        transition: opacity 0.2s ease-out;
+        user-select: none;
+        width: calc(100% - 20px);
+        display: flex;
+        align-items: center;
+        top: 260px;
+        left: 10px;
+
+        &.disabled {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        div {
+            position: absolute;
+            top: 0px;
+
+            width: calc(100% - 40px);
+            max-width: 1120px;
+            left: 20px;
+        }
+
+        @include sm {
+            top: 300px;
+        }
+        @include md {
+            top: 340px;
+            width: calc(100% - 60px);
+            left: 30px;
+        }
+        @include lg {
+            top: 330px;
+            left: 60px;
+            width: calc(100% - 120px);
+        }
+    }
+}
+
+.home-page {
+    .DiscoverTheRange {
+        position: relative;
+        height: 620px;
+        overflow: hidden;
+        display: block;
+        overflow: hidden;
+
+        .button-holder {
+            position: absolute;
+            width: 100%;
+            bottom: 80px;
+            @include flexCenter;
+
+            &::after {
+                position: absolute;
+                content: " ";
+                width: 500px;
+                height: 800px;
+                bottom: 60px;
+                // background-color: rgba(255, 0, 0, 0.2);
+            }
+        }
+
+        h2 {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            z-index: 5;
+            margin-top: 80px;
+            text-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+        }
+
+        .controls {
+            transition: opacity 0.2s ease-out;
+            user-select: none;
+            width: calc(100% - 20px);
+            top: 270px;
+            left: 10px;
+        }
+
+        .canvas-container {
+            overflow: visible;
+            position: absolute;
+            display: block;
+            padding-top: 0;
+            top: 0;
+            pointer-events: all;
+            top: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            canvas.particle-system {
+                width: 1280px;
+                height: 1200px;
+                position: absolute;
+                top: 0px;
+                left: 50%;
+                transform-origin: 50% 0%;
+                transform: translateX(-50%) scale(0.7);
+            }
+        }
+
+        @include sm {
+            height: 680px;
+
+            .controls {
+                top: 350px;
+                width: calc(100% - 100px);
+                left: 50px;
+            }
+
+            .button-holder {
+                bottom: 60px;
+            }
+
+            .canvas-container {
+                padding-top: 0;
+                canvas.particle-system {
+                    top: 20px;
+                    transform: translateX(-50%) scale(0.8);
+                }
+            }
+        }
+
+        @include md {
+            height: 800px;
+
+            .controls {
+                transition: opacity 0.2s ease-out;
+                user-select: none;
+                width: calc(100% - 300px);
+                top: 380px;
+                left: 150px;
+            }
+
+            .button-holder {
+                bottom: 100px;
+            }
+
+            .canvas-container {
+                padding: 0;
+                margin-top: 0px;
+                display: flex;
+                flex-flow: row;
+                justify-content: flex-end;
+                canvas.particle-system {
+                    transform: translateX(-50%) scale(0.9);
+                }
+            }
+        }
+
+        @include lg {
+            height: 880px;
+
+            .controls {
+                transition: opacity 0.2s ease-out;
+                user-select: none;
+                width: calc(100% - 700px);
+                top: 430px;
+                left: 350px;
+            }
+
+            .canvas-container {
+                canvas.particle-system {
+                    transform: translateX(-50%) scale(1);
+                }
+            }
+        }
+    }
+}
+
+.our-range {
+    .DiscoverTheRange {
+        // padding-top: 100px;
+    }
+    @include md {
+        .DiscoverTheRange {
+            padding-top: 0px;
+        }
+        .our-range-nav-dropdown {
+            display: none;
+        }
+    }
+}
+
+.our-range-nav-dropdown {
+    position: absolute;
+    height: 400px;
+    width: 260px;
+    top: 30px;
+    left: calc(50% - 130px);
+    z-index: 2;
+    cursor: pointer;
+    user-select: none;
+
+    .dropdown {
+        position: relative;
+        transition: all 0.2s ease-out;
+        overflow: hidden;
+        height: 100%;
+    }
+    .nav-item {
+        color: white;
+        padding: 8px 50px;
+
+        &.label {
+            text-align: center;
+            border-bottom: 2px solid white;
+        }
+
+        &:not(.label) {
+            background: rgba(0, 0, 0, 0.75);
+            user-select: none;
+            border-bottom: 1px solid $halfWhite;
+            position: relative;
+            background-image: url("../../img/ui/chevron-white.svg");
+            background-repeat: no-repeat;
+            background-size: 15px 15px;
+            background-position: 30px center;
+            padding: 10px 20px 10px 70px;
+
+            transition: all 0.2s ease-out;
+
+            &:hover {
+                border-color: $white;
+                background-position: 34px center;
+            }
+        }
+    }
+
+    &.collapsed {
+        height: 0px;
+        height: 65px;
+        transition: all 0.2s ease-in;
+        .dropdown {
+            height: 0px;
+        }
+    }
+}

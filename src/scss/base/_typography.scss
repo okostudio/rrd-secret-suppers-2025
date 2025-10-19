@@ -1,0 +1,123 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/subset-Roboto-Bold.woff2") format("woff2"),
+        url("../fonts/subset-Roboto-Bold.woff") format("woff"),
+        url("../fonts/subset-Roboto-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "TradeGothic";
+    src: url("../fonts/subset-TradeGothicLT-BoldCond.woff2") format("woff2"),
+        url("../fonts/subset-TradeGothicLT-BoldCond.woff") format("woff"),
+        url("../fonts/subset-TradeGothicLT-BoldCond.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/subset-Roboto-Regular.woff2") format("woff2"),
+        url("../fonts/subset-Roboto-Regular.woff") format("woff"),
+        url("../fonts/subset-Roboto-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body,
+body *,
+p {
+    font-family: $roboto;
+    font-weight: normal;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2 {
+    font-family: $tradeGothic;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: -0.33;
+    line-height: 1.1;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+p,
+a {
+    font-family: $roboto;
+}
+
+p.large {
+    font-size: 19px;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h3 {
+    font-family: $tradeGothic;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+h5 {
+    font-size: 14px;
+    em,
+    i {
+        font-weight: bold;
+    }
+}
+
+em,
+i {
+    display: inline-block;
+    transform: skewX(-10deg);
+    margin-right: 5px;
+}
+
+@include md {
+    h1 {
+        font-size: 44px;
+    }
+
+    p.large {
+        font-size: 22px;
+    }
+}
+
+@include lg {
+    p.large {
+        font-size: 24px;
+    }
+
+    h1 {
+        font-size: 52px;
+    }
+
+    h2 {
+        font-size: 52px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+}

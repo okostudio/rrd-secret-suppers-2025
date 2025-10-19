@@ -1,0 +1,63 @@
+.WhereToBuy {
+    margin: 0;
+    padding: 40px 0;
+
+    background-color: $lightgrey;
+    background-size: cover;
+    background-position: top;
+
+    .content {
+        max-width: 700px;
+        margin: 0 auto 40px;
+        text-align: center;
+        color: white;
+
+        h2 {
+            margin-bottom: 20px;
+        }
+    }
+
+    .stores {
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 350px;
+        margin: 0 auto;
+
+        a {
+            width: 90px;
+            height: 90px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+
+            @include flexCenter;
+
+            img {
+                width: 60px;
+                height: 60px;
+                object-fit: scale-down;
+            }
+        }
+    }
+
+    @include lg {
+        padding: 0 60px;
+
+        .stores {
+            justify-content: center;
+            max-width: 700px;
+
+            a {
+                width: 150px;
+                height: 150px;
+                margin: 30px 15px;
+
+                img {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+        }
+    }
+}

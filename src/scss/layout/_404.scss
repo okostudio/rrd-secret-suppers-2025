@@ -1,0 +1,12 @@
+.PageNotFound {
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  @include flexCenter;
+
+  h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}

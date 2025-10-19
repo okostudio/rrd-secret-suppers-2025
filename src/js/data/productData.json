@@ -1,0 +1,717 @@
+[
+    {
+        "config": {
+            "smallSpriteCount": 60,
+            "smallSpriteSize": 100,
+            "largeSpriteCount": 6,
+            "largeSpriteSize": 200,
+            "productSize": 600,
+            "productSpacing": 150
+        },
+        "nav": [
+            {
+                "imageUrl": "/products/potato-chips/Honey-Soy-Chicken.png",
+                "label": "Potato Chips",
+                "baseUrl": "potato-chips"
+            },
+            {
+                "imageUrl": "/products/tortilla-chips/Tortilla-Parmesan-And-Caramelised-Onion.png",
+                "label": "Tortilla Chips",
+                "baseUrl": "tortilla-chips"
+            },
+            {
+                "imageUrl": "/products/deluxe-crisps/Deluxe-Crisps-Vintage-Ched-Cara-Rose-Oil.png",
+                "label": "Deluxe Crisps",
+                "baseUrl": "deluxe-crisps"
+            },
+            {
+                "imageUrl": "/products/dips/balsamic-beetroot-sml.png",
+                "label": "Dips",
+                "baseUrl": "dips"
+            },
+            {
+                "imageUrl": "/products/limited-edition/Maple-Glazed-Bacon-And-Cheddar.png",
+                "label": "Limited Edition",
+                "baseUrl": "limited-edition-chips"
+            },
+            {
+                "imageUrl": "/products/nuts/Peanuts-Sweet-Honey-And-Sea-Salt.png",
+                "label": "Nuts",
+                "baseUrl": "nuts"
+            }
+        ],
+        "product": {
+            "potato-chips": [
+                {
+                    "title": "Honey Soy Chicken Potato Chips",
+                    "url": "honey-soy-chicken-potato-chips",
+                    "copy": "Our Honey Soy Chicken potato  chips blends the sweetness of honey cut by the subtle richness of soy sauce.",
+                    "subCopy": "We begin with the finest potatoes harvested from Australian farms, roughly cut and slow cooked in Sunflower Oil, for the most delectable crunch.",
+                    "packImageUrl": "/products/potato-chips/Honey-Soy-Chicken.png",
+                    "particleUrl": "/products/potato-chips/particles-potatochips.png",
+                    "flavourPairing": {
+                        "image": "/images/flavour-pairings/placeholder.jpg",
+                        "copy": ""
+                    },
+                    "nutritionalInfo": {
+                        "image": "/products/nutritional-info/potato-chip-HoneySoyChicken-Info@2x.png"
+                    },
+                    "particles": {
+                        "index": 3,
+                        "smallItemCount": 6,
+                        "largeItemCount": 6,
+                        "randomSeed": 426,
+                        "oldRandomSeed": [
+                            442,
+                            863,
+                            1248
+                        ]
+                    },
+                    "meta": {
+                        "description": "This Red Rock Deli® classic has become a must-have snack at home or on the go. Join the movement, find our Honey Soy Chicken Potato Chips in store today.",
+                        "keywords": "Red, Rock, Deli, Chips, Nuts, Feed your curiosity, curious chips and nuts",
+                        "title": "Honey Soy Chicken | Potato Chips | Red Rock Deli©"
+                    }
+                },
+                {
+                    "title": "Lime & Black Pepper Potato Chips",
+                    "url": "lime-black-pepper-potato-chips",
+                    "copy": "Our Lime & Black Pepper potato chips meld a tangy combination of fresh lime cut by the subtle heat of freshly ground black peppercorns.",
+                    "subCopy": "We begin with the finest potatoes harvested from Australian farms, roughly cut and slow cooked in Sunflower Oil, for the most delectable crunch.",
+                    "packImageUrl": "/products/potato-chips/Lime-Black-Pepper.png",
+                    "particleUrl": "/products/potato-chips/particles-potatochips.png",
+                    "flavourPairing": {
+                        "image": "/images/flavour-pairings/placeholder.jpg",
+                        "copy": ""
+                    },
+                    "nutritionalInfo": {
+                        "image": "/products/nutritional-info/potato-chip-LimeCrackedPepper-Info@2x.png"
+                    },
+                    "particles": {
+                        "index": 1,
+                        "smallItemCount": 6,
+                        "largeItemCount": 6,
+                        "randomSeed": 1531
+                    },
+                    "meta": {
+                        "description": "This Red Rock Deli® classic has become a must-have snack at home or on the go. Join the movement, find our Lime & Black Pepper Potato Chips in store today.",
+                        "keywords": "Red, Rock, Deli, Chips, Nuts, Feed your curiosity, curious chips and nuts",
+                        "title": "Lime Black Pepper | Potato Chips | Red Rock Deli©"
+                    }
+                },
+                {
+                    "title": "Sea Salt & Balsamic Vinegar Potato Chips",
+                    "url": "sea-salt-balsamic-potato-chips",
+                    "copy": "Our Sea Salt & Balsamic Vinegar potato chips blend a grind of fresh sea salt with a generous splash of the sweet sharpness of balsamic vinegar.",
+                    "subCopy": "We begin with the finest potatoes harvested from Australian farms, roughly cut and slow cooked in Sunflower Oil, for the most delectable crunch.",
+                    "packImageUrl": "/products/potato-chips/Sea-Salt-Balsamic.png",
+                    "particleUrl": "/products/potato-chips/particles-potatochips.png",
+                    "flavourPairing": {
+                        "image": "/images/flavour-pairings/placeholder.jpg",
+                        "copy": ""
+                    },
+                    "nutritionalInfo": {
+                        "image": "/products/nutritional-info/potato-chip-SeaSaltBalsamic-Info@2x.png"
+                    },
+                    "particles": {
+                        "index": 0,
+                        "smallItemCount": 6,
+                        "largeItemCount": 4,
+                        "randomSeed": 1583
+                    },
+                    "meta": {
+                        "description": "This Red Rock Deli® classic has become a must-have snack at home or on the go. Join the movement, find our Sea Salt & Balsamic Potato Chips in store today.",
+                        "keywords": "Red, Rock, Deli, Chips, Nuts, Feed your curiosity, curious chips and nuts",
+                        "title": "Sea Salt Balsamic | Potato Chips | Red Rock Deli©"
+                    }
+                },
+                {
+                    "title": "Sea Salt Potato Chips",
+                    "url": "sea-salt-potato-chips",
+                    "copy": "Our classic potato chips are seasoned with a grinding of Australian sea salt to enrich the natural potato taste.",
+                    "subCopy": "We begin with the finest potatoes harvested from Australian farms, roughly cut and slow cooked in Sunflower Oil, for the most delectable crunch.",
+                    "packImageUrl": "/products/potato-chips/Sea-Salt.png",
+                    "particleUrl": "/products/potato-chips/particles-potatochips.png",
+                    "flavourPairing": {
+                        "image": "/images/flavour-pairings/placeholder.jpg",
+                        "copy": ""
+                    },
+                    "nutritionalInfo": {
+                        "image": "/products/nutritional-info/potato-chip-SeaSalt-Info@2x.png"
+                    },
+                    "particles": {
+                        "index": 0,
+                        "smallItemCount": 6,
+                        "largeItemCount": 4,
+                        "randomSeed": 680
+                    },
+                    "meta": {
+                        "description": "This Red Rock Deli® classic has become a must-have snack at home or on the go. Join the movement, find our Sea Salt Potato Chips in store today.",
+                        "keywords": "Red, Rock, Deli, Chips, Nuts, Feed your curiosity, curious chips and nuts",
+                        "title": "Sea Salt | Potato Chips | Red Rock Deli©"
+                    }
+                },
+                {
+                    "title": "Sweet Chilli and Sour Cream Potato Chips",
+                    "url": "sweeti-chilli-sour-cream-potato-chips",
+                    "copy": "Our Sweet Chilli & Sour Cream potato chips fuse the lingering sweet heat of chilli and paprika with a hint of smooth tangy sour cream.",
+                    "subCopy": "We begin with the finest potatoes harvested from Australian farms, roughly cut and slow cooked in Sunflower Oil, for the most delectable crunch.",
+                    "packImageUrl": "/products/potato-chips/Sweet-Chilli-Sour-Cream.png",
+                    "particleUrl": "/products/potato-chips/particles-potatochips.png",
+                    "flavourPairing": {
+                        "image": "/images/flavour-pairings/placeholder.jpg",
+                        "copy": ""
+                    },
+                    "nutritionalInfo": {
+                        "image": "/products/nutritional-info/potato-chip-SweetChilliSourCream-Info@2x.png"
+                    },
+                    "particles": {
+                        "index": 2,
+                        "smallItemCount": 8,
+                        "largeItemCount": 6,
+                        "randomSeed": 1755
+                    },
+                    "meta": {
+                        "description": "This Red Rock Deli® classic has become a must-have snack at home or on the go. Join the movement, find our Sweet Chilli & Sour Cream Potato Chips in store today.",
+                        "keywords": "Red, Rock, Deli, Chips, Nuts, Feed your curiosity, curious chips and nuts",
+                        "title": "Sweet Chilli Sour Cream | Potato Chips | Red Rock Deli©"
+                    }
+                }
+            ],
+            "tortilla-chips": [
+                {
+                    "title": "Parmesan & Caramelised Onion Tortilla Chips",
+                    "url": "parmesan-caramelised-onion-tortilla-chips",
+                    "copy": "Our Red Rock Deli Parmesan & Caramelised Onion Tortilla Chips blend the sharp and mature taste of parmesan with the delicate sweetness of caramelised onions for an irresistibly rich, sweet and savoury tortilla chip taste.",
+                    "subCopy": "Our Tortilla Chips are made with finely selected corn harvested from Australian farms . Enjoy authentic thick cut tortilla chips made with only the finest quality ingredients for a truly unique flavour sensation.",
+                    "packImageUrl": "/products/tortilla-chips/Tortilla-Parmesan-And-Caramelised-Onion.png",
+                    "particleUrl": "/products/tortilla-chips/particles-tortilla.png",
+                    "flavourPairing": {
+                        "image": "/images/flavour-pairings/placeholder.jpg",
+                        "copy": ""
+                    },
+                    "nutritionalInfo": {
+                        "image": "/products/nutritional-info/tortilla-chips-ParmesanCaramelisedOnion-Info@2x.png"
+                    },
+                    "particles": {
+                        "index": 1,
+                        "smallItemCount": 4,
+                        "largeItemCount": 5,
+                        "randomSeed": 1585
+                    },
+                    "meta": {
+                        "description": "Try a corn tortilla with a twist. Our Parmesan & Caramelised Onion Tortilla Chips are perfect on their own or with a dip. Find this Red Rock Deli® snack in store now.",
+                        "keywords": "Red, Rock, Deli, Chips, Nuts, Feed your curiosity, curious chips and nuts",
+                        "title": "Parmesan Caramelised Onion | Tortilla Chips | Red Rock Deli©"
+                    }
+                },
+                {
+                    "title": "Tangy Roast Tomato Relish Tortilla Chips",
+                    "url": "tangy-roast-tomato-relish-tortilla-chips",
+                    "copy": "Our Red Rock Deli Tangy Roast Tomato Relish flavoured Tortilla Chips pairs the richness of roasted tomatoes with a hint of black pepper and paprika to create a deliciously sweet and tangy relish.",
+                    "subCopy": "Our Tortilla Chips are made with finely selected corn harvested from Australian farms . Enjoy authentic thick cut tortilla chips made with only the finest quality ingredients for a truly unique flavour sensation.",
+                    "packImageUrl": "/products/tortilla-chips/Tortilla-Tangy-Tomato-Relish.png",
+                    "particleUrl": "/products/tortilla-chips/particles-tortilla.png",
+                    "flavourPairing": {
+                        "image": "/images/flavour-pairings/placeholder.jpg",
+                        "copy": ""
+                    },
+                    "nutritionalInfo": {
+                        "image": "/products/nutritional-info/tortilla-chips-TangyTomatoRelish-Info@2x.png"
+                    },
+                    "particles": {
+                        "index": 2,
+                        "smallItemCount": 3,
+                        "largeItemCount": 5,
+                        "randomSeed": 666
+                    },
+                    "meta": {
+                        "description": "Try a corn tortilla with a twist. Our Tangy Roast Tomato Relish Tortilla Chips are perfect on their own or with a dip. Find this Red Rock Deli® snack in store now.",
+                        "keywords": "Red, Rock, Deli, Chips, Nuts, Feed your curiosity, curious chips and nuts",
+                        "title": "Tangy Roast Tomato Relish | Tortilla Chips | Red Rock Deli©"
+                    }
+                },
+                {
+                    "title": "Creamy Feta, Avocado and Lime Tortilla Chips",
+                    "url": "creamy-feta-avocado-lime-tortilla-chips",
+                    "copy": "Our Red Rock Deli Creamy Feta, Avocado & Lime flavoured Tortilla Chips combine the creamy flavour of feta, complemented by the rich smoothness of avocado and a fresh burst of lime.",
+                    "subCopy": "Our Tortilla Chips are made with finely selected corn harvested from Australian farms . Enjoy authentic thick cut tortilla chips made with only the finest quality ingredients for a truly unique flavour sensation.",
+                    "packImageUrl": "/products/tortilla-chips/Tortilla-Creamy-Feta-Avo-And-Lime.png",
+                    "particleUrl": "/products/tortilla-chips/particles-tortilla.png",
+                    "flavourPairing": {
+                        "image": "/images/flavour-pairings/placeholder.jpg",
+                        "copy": ""
+                    },
+                    "nutritionalInfo": {
+                        "image": "/products/nutritional-info/tortilla-chips-FetaAvoLime-Info@2x.png"
+                    },
+                    "particles": {
+                        "index": 0,
+                        "smallItemCount": 3,
+                        "largeItemCount": 5,
+                        "randomSeed": 319
+                    },
+                    "meta": {
+                        "description": "Try a corn tortilla with a twist. Our Creamy Feta, Avocado & Lime Tortilla Chips are perfect on their own or with a dip. Find this Red Rock Deli® snack in store now.",
+                        "keywords": "Red, Rock, Deli, Chips, Nuts, Feed your curiosity, curious chips and nuts",
+                        "title": "Creamy Feta Avocado Lime | Tortilla Chips | Red Rock Deli©"
+                    }
+                }
+            ],
+            "deluxe-crisps": [
+                {
+                    "title": "Vintage Cheddar, Caramelised Onion & Rosemary Oil Crisps",
+                    "url": "vintage-cheddar-onion-rosemary-deluxe-crisps",
+                    "copy": "Our Vintage Cheddar, Caramelised Onion & Rosemary Oil Deluxe Potato Crisps are seasoned with the creamy sharp taste of vintage cheddar combined with the sweetness of caramelised onion  and are complemented with a light spritz of rosemary oil.",
+                    "subCopy": "Our Crisps use only the finest quality potatoes, slow cooked until they’re golden and crunchy and spritzed with premium infused oils.",
+                    "packImageUrl": "/products/deluxe-crisps/Deluxe-Crisps-Vintage-Ched-Cara-Rose-Oil.png",
+                    "particleUrl": "/products/deluxe-crisps/particles-deluxe.png",
+                    "flavourPairing": {
+                        "image": "/images/flavour-pairings/placeholder.jpg",
+                        "copy": ""
+                    },
+                    "nutritionalInfo": {
+                        "image": "/products/nutritional-info/deluxe-crisps-VintageCheddar-Info@2x.png"
+                    },
+                    "particles": {
+                        "index": 2,
+                        "smallItemCount": 4,
+                        "largeItemCount": 6,
+                        "randomSeed": 290
+                    },
+                    "meta": {
+                        "description": "Try our Vintage Cheddar Onion Rosemary Deluxe Crips for a fancy take on the 'classic' chip. Find your next Red Rock Deli® snack in store now.",
+                        "keywords": "Red, Rock, Deli, Chips, Nuts, Feed your curiosity, curious chips and nuts",
+                        "title": "Vintage Cheddar Onion Rosemary | Deluxe Crisps | Red Rock Deli©"
+                    }
+                },
+                {
+                    "title": "Parmesan & Black Truffle Oil Crisps",
+                    "url": "parmesan-black-truffle-oil-deluxe-crisps",
+                    "copy": "Our Parmesan & Black Truffle Oil Deluxe Potato Crisps are seasoned with the distinctive sharp taste of parmesan and are complemented with a light spritz of decadent, rich truffle oil.",
+                    "subCopy": "Our Crisps use only the finest quality potatoes, slow cooked until they’re golden and crunchy and spritzed with premium infused oils.",
+                    "packImageUrl": "/products/deluxe-crisps/Deluxe-Crisps-Parm-And-Black-Truffle-Oil.png",
+                    "particleUrl": "/products/deluxe-crisps/particles-deluxe.png",
+                    "flavourPairing": {
+                        "image": "/images/flavour-pairings/placeholder.jpg",
+                        "copy": ""
+                    },
+                    "nutritionalInfo": {
+                        "image": "/products/nutritional-info/deluxe-crisps-ParmesanBlackTruffle-Info@2x.png"
+                    },
+                    "particles": {
+                        "index": 1,
+                        "smallItemCount": 2,
+                        "largeItemCount": 5,
+                        "randomSeed": 1086
+                    },
+                    "meta": {
+                        "description": "Try our Parmesan & Black Truffle Oil Deluxe Crisps for a fancy take on the 'classic' chip. Find your next Red Rock Deli® snack in store now.",
+                        "keywords": "Red, Rock, Deli, Chips, Nuts, Feed your curiosity, curious chips and nuts",
+                        "title": "Parmesan Black Truffle Oil | Deluxe Crisps | Red Rock Deli©"
+                    }
+                },
+                {
+                    "title": "Chilli, Roast Garlic & Lemon Oil Crisps",
+                    "url": "chilli-roast-garlic-lemon-oil-deluxe-crisps",
+                    "copy": "Our Chilli, Roast Garlic and Lemon Oil Deluxe Potato Crisps are seasoned with sweet slow roasted garlic, combined with the kick of chilli and are complemented with a light spritz of zesty lemon oil.",
+                    "subCopy": "Our Crisps use only the finest quality potatoes, slow cooked until they’re golden and crunchy and spritzed with premium infused oils.",
+                    "packImageUrl": "/products/deluxe-crisps/Deluxe-Crisps-Chilli-Roast-Garlic-Lem-Oil.png",
+                    "particleUrl": "/products/deluxe-crisps/particles-deluxe.png",
+                    "flavourPairing": {
+                        "image": "/images/flavour-pairings/placeholder.jpg",
+                        "copy": ""
+                    },
+                    "nutritionalInfo": {
+                        "image": "/products/nutritional-info/deluxe-crisps-ChilliRoastGarlic-Info@2x.png"
+                    },
+                    "particles": {
+                        "index": 0,
+                        "smallItemCount": 5,
+                        "largeItemCount": 5,
+                        "randomSeed": 341
+                    },
+                    "meta": {
+                        "description": "Try our Chilli Roast Garlic Lemon Oil Deluxe Crisps for a fancy take on the 'classic' chip. Find your next Red Rock Deli® snack in store now.",
+                        "keywords": "Red, Rock, Deli, Chips, Nuts, Feed your curiosity, curious chips and nuts",
+                        "title": "Chilli Roast Garlic Lemon Oil | Deluxe Crisps | Red Rock Deli©"
+                    }
+                }
+            ],
+            "dips": [
+                {
+                    "title": "Balsamic Beetroot, Feta & Cashew Dip",
+                    "url": "balsamic-beetroot-feta-cashew-dip",
+                    "copy": "Our Balsamic Beetroot dip combines deliciously cut balsamic beets with creamy feta and cashew.",
+                    "subCopy": "We begin with select vegetables, cheeses and nuts, combining them with fine ingredients, to craft the most indulgent dips. With the addition of a pinch, sprinkle or portion of a herb, a spice or fine delicacy, a tantalizing adventure for the senses awaits to be savoured.",
+                    "packImageUrl": "/products/dips/Balsamic-Beetroot.png",
+                    "particleUrl": "/products/dips/particles-dips.png",
+                    "flavourPairing": {
+                        "image": "/images/flavour-pairings/placeholder.jpg",
+                        "copy": ""
+                    },
+                    "nutritionalInfo": {
+                        "image": "/products/nutritional-info/dips-BalsamicBeetrootFeta@2x.png"
+                    },
+                    "particles": {
+                        "index": 0,
+                        "smallItemCount": 2,
+                        "largeItemCount": 4,
+                        "randomSeed": 1239
+                    },
+                    "meta": {
+                        "description": "Guests dropping by? Whip us some crisps and open a Balsamic Beetroot Dip and you're sorted. Find your next Red Rock Deli® snack in store now.",
+                        "keywords": "Red, Rock, Deli, Chips, Nuts, Feed your curiosity, curious chips and nuts",
+                        "title": "Balsamic Beetroot | Dips | Red Rock Deli©"
+                    }
+                },
+                {
+                    "title": "Basil Pesto, Pecorino & Cashews Dip",
+                    "url": "basil-pesto-pecorino-dip",
+                    "copy": "Our Basil Pesto dip balances the aromatic and fragrant richness of basil perfectly with cashew and pecorino.",
+                    "subCopy": "We begin with select vegetables, cheeses and nuts, combining them with fine ingredients, to craft the most indulgent dips. With the addition of a pinch, sprinkle or portion of a herb, a spice or fine delicacy, a tantalizing adventure for the senses awaits to be savoured.",
+                    "packImageUrl": "/products/dips/Basil-Pesto-Pecorino.png",
+                    "particleUrl": "/products/dips/particles-dips.png",
+                    "flavourPairing": {
+                        "image": "/images/flavour-pairings/placeholder.jpg",
+                        "copy": ""
+                    },
+                    "nutritionalInfo": {
+                        "image": "/products/nutritional-info/dips-BasilPestoPecorinoCashew@2x.png"
+                    },
+                    "particles": {
+                        "index": 1,
+                        "smallItemCount": 2,
+                        "largeItemCount": 3,
+                        "randomSeed": 949
+                    },
+                    "meta": {
+                        "description": "Guests dropping by? Whip us some crisps and open a Basil Pesto Pecorino Dip and you're sorted. Find your next Red Rock Deli® snack in store now.",
+                        "keywords": "Red, Rock, Deli, Chips, Nuts, Feed your curiosity, curious chips and nuts",
+                        "title": "Basil Pesto Pecorino | Dips | Red Rock Deli©"
+                    }
+                },
+                {
+                    "title": "Roasted Pumpkin, Caramelised onion & cashew Dip",
+                    "url": "roasted-pumpkin-caramelised-onion-cashew-dip",
+                    "copy": "Our Roasted Pumpkin dip is a sweet and flavourful combination of roasted pumpkin, caramelised onion and cashews.",
+                    "subCopy": "We begin with select vegetables, cheeses and nuts, combining them with fine ingredients, to craft the most indulgent dips. With the addition of a pinch, sprinkle or portion of a herb, a spice or fine delicacy, a tantalizing adventure for the senses awaits to be savoured.",
+                    "packImageUrl": "/products/dips/Roast-Pumpkin.png",
+                    "particleUrl": "/products/dips/particles-dips.png",
+                    "flavourPairing": {
+                        "image": "/images/flavour-pairings/placeholder.jpg",
+                        "copy": ""
+                    },
+                    "nutritionalInfo": {
+                        "image": "/products/nutritional-info/dips-RoastPumpkinOnionCashew@2x.png"
+                    },
+                    "particles": {
+                        "index": 2,
+                        "smallItemCount": 2,
+                        "largeItemCount": 3,
+                        "randomSeed": 412
+                    },
+                    "meta": {
+                        "description": "Guests dropping by? Whip us some crisps and open a Roast Pumpkin Dip and you're sorted. Find your next Red Rock Deli® snack in store now.",
+                        "keywords": "Red, Rock, Deli, Chips, Nuts, Feed your curiosity, curious chips and nuts",
+                        "title": "Roast Pumpkin | Dips | Red Rock Deli©"
+                    }
+                },
+                {
+                    "title": "Roast Tomato, Feta, Basil & Cashew Dip",
+                    "url": "roast-tomato-feta-basil-cashew-dip",
+                    "copy": "Our Roast Tomato dip pairs the fresh and aromatic flavour of roasted tomato with creamy feta, basil and cashews.",
+                    "subCopy": "We begin with select vegetables, cheeses and nuts, combining them with fine ingredients, to craft the most indulgent dips. With the addition of a pinch, sprinkle or portion of a herb, a spice or fine delicacy, a tantalizing adventure for the senses awaits to be savoured.",
+                    "packImageUrl": "/products/dips/Roast-Tomato-Feta-Basil-And-Cashew.png",
+                    "particleUrl": "/products/dips/particles-dips.png",
+                    "flavourPairing": {
+                        "image": "/images/flavour-pairings/placeholder.jpg",
+                        "copy": ""
+                    },
+                    "nutritionalInfo": {
+                        "image": "/products/nutritional-info/dips-RoastTomFetaBasil@2x.png"
+                    },
+                    "particles": {
+                        "index": 3,
+                        "smallItemCount": 2,
+                        "largeItemCount": 4,
+                        "randomSeed": 1055
+                    },
+                    "meta": {
+                        "description": "Guests dropping by? Whip us some crisps and open a Roast Tomato Feta, Basil & Cashew Dip and you're sorted. Find your next Red Rock Deli® snack in store now.",
+                        "keywords": "Red, Rock, Deli, Chips, Nuts, Feed your curiosity, curious chips and nuts",
+                        "title": "Roast Tomato Feta Basil Cashew | Dips | Red Rock Deli©"
+                    }
+                },
+                {
+                    "title": "Roasted Red Capsicum, Pecorino, Cashews & Basil Dip",
+                    "url": "roasted-red-capsicum-dip",
+                    "copy": "Our Roasted Red Capsicum dip perfectly pairs roasted red capsicum with pecorino, basil and cashew.",
+                    "subCopy": "We begin with select vegetables, cheeses and nuts, combining them with fine ingredients, to craft the most indulgent dips. With the addition of a pinch, sprinkle or portion of a herb, a spice or fine delicacy, a tantalizing adventure for the senses awaits to be savoured.",
+                    "packImageUrl": "/products/dips/Roasted-Red-Capsicum.png",
+                    "particleUrl": "/products/dips/particles-dips.png",
+                    "flavourPairing": {
+                        "image": "/images/flavour-pairings/placeholder.jpg",
+                        "copy": ""
+                    },
+                    "nutritionalInfo": {
+                        "image": "/products/nutritional-info/dips-RoastRedCapsicum@2x.png"
+                    },
+                    "particles": {
+                        "index": 4,
+                        "smallItemCount": 2,
+                        "largeItemCount": 5,
+                        "randomSeed": 1269
+                    },
+                    "meta": {
+                        "description": "Guests dropping by? Whip us some crisps and open a Roasted Red Capsicum Dip and you're sorted. Find your next Red Rock Deli® snack in store now.",
+                        "keywords": "Red, Rock, Deli, Chips, Nuts, Feed your curiosity, curious chips and nuts",
+                        "title": "Roasted Red Capsicum | Dips | Red Rock Deli©"
+                    }
+                },
+                {
+                    "title": "Spicy Capsicum, Chilli & Cashews Dip",
+                    "url": "spicy-capsicum-dip",
+                    "copy": "Our Roasted Pumpkin Dip is an aromatic and flavourful combination of capsicum, chilli and cashews.",
+                    "subCopy": "We begin with select vegetables, cheeses and nuts, combining them with fine ingredients, to craft the most indulgent dips. With the addition of a pinch, sprinkle or portion of a herb, a spice or fine delicacy, a tantalizing adventure for the senses awaits to be savoured.",
+                    "packImageUrl": "/products/dips/RRD-Spicy-Capsicum.png",
+                    "particleUrl": "/products/dips/particles-dips.png",
+                    "flavourPairing": {
+                        "image": "/images/flavour-pairings/placeholder.jpg",
+                        "copy": ""
+                    },
+                    "nutritionalInfo": {
+                        "image": "/products/nutritional-info/"
+                    },
+                    "particles": {
+                        "index": 5,
+                        "smallItemCount": 3,
+                        "largeItemCount": 4,
+                        "randomSeed": 1989
+                    },
+                    "meta": {
+                        "description": "Guests dropping by? Whip us some crisps and open a Spicy Capsicum Dip and you're sorted. Find your next Red Rock Deli® snack in store now.",
+                        "keywords": "Red, Rock, Deli, Chips, Nuts, Feed your curiosity, curious chips and nuts",
+                        "title": "Spicy Capsicum | Dips | Red Rock Deli©"
+                    }
+                },
+                {
+                    "title": "Thai Chilli, Lemongrass, Coriander & Cashews Dip",
+                    "url": "thai-chilli-dip",
+                    "copy": "Our Thai Chilli dip combines the exotic, vibrant tastes of thai chilli, lemongrass, coriander and cashew.",
+                    "subCopy": "We begin with select vegetables, cheeses and nuts, combining them with fine ingredients, to craft the most indulgent dips. With the addition of a pinch, sprinkle or portion of a herb, a spice or fine delicacy, a tantalizing adventure for the senses awaits to be savoured.",
+                    "packImageUrl": "/products/dips/Thai-Chilli.png",
+                    "particleUrl": "/products/dips/particles-dips.png",
+                    "flavourPairing": {
+                        "image": "/images/flavour-pairings/placeholder.jpg",
+                        "copy": ""
+                    },
+                    "nutritionalInfo": {
+                        "image": "/products/nutritional-info/dips-ThaiLemongrass@2x.png"
+                    },
+                    "particles": {
+                        "index": 6,
+                        "smallItemCount": 5,
+                        "largeItemCount": 4,
+                        "randomSeed": 1363
+                    },
+                    "meta": {
+                        "description": "Guests dropping by? Whip us some crisps and open a Thai Chilli Dip and you're sorted. Find your next Red Rock Deli® snack in store now.",
+                        "keywords": "Red, Rock, Deli, Chips, Nuts, Feed your curiosity, curious chips and nuts",
+                        "title": "Thai Chilli | Dips | Red Rock Deli©"
+                    }
+                }
+            ],
+            "limited-edition-chips": [
+                {
+                    "title": "Maple Glazed Bacon & Cheddar Potato Chips",
+                    "url": "maple-glazed-bacon-cheddar-chips",
+                    "copy": "Our Maple Glazed Bacon & Cheddar potato chips combine the rich, sweet smokiness of maple bacon with the subtle creaminess of cheddar.",
+                    "subCopy": "We begin with the finest potatoes harvested from Australian farms, roughly cut and slow cooked in Sunflower Oil, for the most delectable crunch.",
+                    "packImageUrl": "/products/limited-edition/Maple-Glazed-Bacon-And-Cheddar.png",
+                    "particleUrl": "/products/limited-edition/particles-limiteded.png",
+                    "flavourPairing": {
+                        "image": "/images/flavour-pairings/placeholder.jpg",
+                        "copy": ""
+                    },
+                    "nutritionalInfo": {
+                        "image": "/products/nutritional-info/limited-edition-MapleGlazedBaconCheddar-Info.png"
+                    },
+                    "particles": {
+                        "index": 0,
+                        "smallItemCount": 6,
+                        "largeItemCount": 5,
+                        "randomSeed": 1209,
+                        "otherGoodSeeds": [
+                            317,
+                            1381
+                        ]
+                    },
+                    "meta": {
+                        "description": "Feed your curiosity and surprise your taste buds with our Maple-Glazed Bacon & Cheddar Limited Edition Chips. Find this new Red Rock Deli® snack in store now.",
+                        "keywords": "Red, Rock, Deli, Chips, Nuts, Feed your curiosity, curious chips and nuts",
+                        "title": "Maple Glazed Bacon Cheddar | Limited Edition Chips | Red Rock Deli©"
+                    }
+                },
+                {
+                    "title": "Moroccan Spiced Chicken & Lemon Potato Chips",
+                    "url": "moroccan-spiced-chicken-chips",
+                    "copy": "Our Moroccan Spiced Chicken & Lemon potato chips blend the exotic flavour of Moroccan spices and succulent chicken with the freshness of zesty lemon.",
+                    "subCopy": "We begin with the finest potatoes harvested from Australian farms, roughly cut and slow cooked in Sunflower Oil, for the most delectable crunch.",
+                    "packImageUrl": "/products/limited-edition/Moroccan-Spiced-Chicken-And-Lemon.png",
+                    "particleUrl": "/products/limited-edition/particles-limiteded.png",
+                    "flavourPairing": {
+                        "image": "/images/flavour-pairings/placeholder.jpg",
+                        "copy": ""
+                    },
+                    "nutritionalInfo": {
+                        "image": "/products/nutritional-info/limited-edition-MorrocanChickenLemon-Info.png"
+                    },
+                    "particles": {
+                        "index": 1,
+                        "smallItemCount": 4,
+                        "largeItemCount": 5,
+                        "randomSeed": 1382
+                    },
+                    "meta": {
+                        "description": "Feed your curiosity and surprise your taste buds with our Maroccan Spiced Chicken Limited Edition Chips. Find this new Red Rock Deli® snack in store now.",
+                        "keywords": "Red, Rock, Deli, Chips, Nuts, Feed your curiosity, curious chips and nuts",
+                        "title": "Moroccan Spiced Chicken | Limited Edition Chips | Red Rock Deli©"
+                    }
+                }
+            ],
+            "nuts": [
+                {
+                    "title": "Sweet Honey & Sea Salt Roasted Peanuts",
+                    "url": "sweet-honey-sea-salt-roasted-peanuts",
+                    "copy": "Our Oven Roasted Sweet Honey & Sea Salt Peanuts combine the intensity of salt that cuts through the delicate sweetness of honey to deliver an unexpected sweet savoury twist to an irresistibly delicious snack.",
+                    "subCopy": "Discover our delicious Roasted peanuts, crafted with fine quality peanuts and gourmet deli inspired ingredients.",
+                    "packImageUrl": "/products/nuts/Peanuts-Sweet-Honey-And-Sea-Salt.png",
+                    "particleUrl": "/products/nuts/particles-nuts.png",
+                    "flavourPairing": {
+                        "image": "/images/flavour-pairings/placeholder.jpg",
+                        "copy": ""
+                    },
+                    "nutritionalInfo": {
+                        "image": "/products/nutritional-info/nuts-SweetHoneySeaSalt-Info@2x.png"
+                    },
+                    "particles": {
+                        "index": 2,
+                        "smallItemCount": 5,
+                        "largeItemCount": 3,
+                        "randomSeed": 1716
+                    },
+                    "meta": {
+                        "description": "Looking for something different? Snack on Sweet Honey & Sea Salt Mixed Nuts for an explosion of new flavours. Find this Red Rock Deli® snack in store now.",
+                        "keywords": "Red, Rock, Deli, Chips, Nuts, Feed your curiosity, curious chips and nuts",
+                        "title": "Sweet Honey Sea Salt | Mixed Nuts | Red Rock Deli©"
+                    }
+                },
+                {
+                    "title": "Honey, Vanilla & Cranberries Glazed Mix",
+                    "url": "honey-vanilla-cranberry-glazed-mix",
+                    "copy": "Our Honey, Vanilla And Cranberries Glazed Nuts combine the delicious tanginess of cranberries with notes of fragrant vanilla and a caramelised honey glaze to deliver a delicious sweet twist to a delectable crunchy snack.",
+                    "subCopy": "Discover our delicious Glazed Mix range, crafted with fine quality peanuts, almonds, cashews and dried fruit  with sophisticated gourmet deli inspired ingredients.",
+                    "packImageUrl": "/products/nuts/Glazed-Nuts-Vanilla-Cranberry-And-Honey.png",
+                    "particleUrl": "/products/nuts/particles-nuts.png",
+                    "flavourPairing": {
+                        "image": "/images/flavour-pairings/placeholder.jpg",
+                        "copy": ""
+                    },
+                    "nutritionalInfo": {
+                        "image": "/products/nutritional-info/nuts-VanillaCranberryHoney-Info@2x.png"
+                    },
+                    "particles": {
+                        "index": 4,
+                        "smallItemCount": 6,
+                        "largeItemCount": 3,
+                        "randomSeed": 1624
+                    },
+                    "meta": {
+                        "description": "Looking for something different? Snack on Honey, Vanilla & Cranberry Mixed Nuts for an explosion of new flavours. Find this Red Rock Deli® snack in store now.",
+                        "keywords": "Red, Rock, Deli, Chips, Nuts, Feed your curiosity, curious chips and nuts",
+                        "title": ""
+                    }
+                },
+                {
+                    "title": "Balsamic Vinegar & Chilli Roasted Mixed Nuts",
+                    "url": "balsamic-vinegar-chilli-mixed-nuts",
+                    "copy": "Our Balsamic Vinegar and Chilli Roasted Nuts combine the sweet and tangy flavour of balsamic with the sharp heat of chilli for an irresistibly delicious snack. ",
+                    "subCopy": "Discover our delicious Roasted Mix range, crafted with fine quality peanuts, almonds, cashews and dried fruit with sophisticated gourmet deli inspired ingredients.",
+                    "packImageUrl": "/products/nuts/Mixed-Nuts-Balsamic-Vinegar-And-Chilli.png",
+                    "particleUrl": "/products/nuts/particles-nuts.png",
+                    "flavourPairing": {
+                        "image": "/images/flavour-pairings/placeholder.jpg",
+                        "copy": ""
+                    },
+                    "nutritionalInfo": {
+                        "image": "/products/nutritional-info/nuts-BalsamicVinegar&Chilli-Info@2x.png"
+                    },
+                    "particles": {
+                        "index": 1,
+                        "smallItemCount": 4,
+                        "largeItemCount": 2,
+                        "randomSeed": 1190
+                    },
+                    "meta": {
+                        "description": "Looking for something different? Snack on Balsamic Vinegar & Chilli Mixed Nuts for an explosion of new flavours. Find this Red Rock Deli® snack in store now.",
+                        "keywords": "Red, Rock, Deli, Chips, Nuts, Feed your curiosity, curious chips and nuts",
+                        "title": "Honey Vanilla Cranberry | Mixed Nuts | Red Rock Deli©"
+                    }
+                },
+                {
+                    "title": "Caramelised Garlic & Lemon Roasted Mixed Nuts",
+                    "url": "cramalised-garlic-lemon-mixed-nuts",
+                    "copy": "Our Caramelised Garlic and Lemon Roasted Nuts combine the delicate sweetness of caramelised garlic with tangy lemon for an irresistibly delicious snack.",
+                    "subCopy": "Discover our delicious Roasted Mix range, crafted with fine quality peanuts, almonds, cashews and dried fruit with sophisticated gourmet deli inspired ingredients.",
+                    "packImageUrl": "/products/nuts/Mixed-Nuts-Cramalised-Garlic-And-Lemon.png",
+                    "particleUrl": "/products/nuts/particles-nuts.png",
+                    "flavourPairing": {
+                        "image": "/images/flavour-pairings/placeholder.jpg",
+                        "copy": ""
+                    },
+                    "nutritionalInfo": {
+                        "image": "/products/nutritional-info/nuts-CaramelisedGarlicLemon-Info@2x.png"
+                    },
+                    "particles": {
+                        "index": 0,
+                        "smallItemCount": 4,
+                        "largeItemCount": 4,
+                        "randomSeed": 569
+                    },
+                    "meta": {
+                        "description": "Looking for something different? Snack on Caramelised Garlic & Lemon Mixed Nuts for an explosion of new flavours. Find this Red Rock Deli® snack in store now.",
+                        "keywords": "Red, Rock, Deli, Chips, Nuts, Feed your curiosity, curious chips and nuts",
+                        "title": "Caramelised Garlic Lemon | Mixed Nuts | Red Rock Deli©"
+                    }
+                },
+                {
+                    "title": "Cinnamon & Apple Crumble Glazed Mix",
+                    "url": "cinnamon-apple-crumble-glazed-mix",
+                    "copy": "Our Cinnamon And Apple Crumble Glazed Nuts combine the delicate sweetness of sliced apples, deliciously fragrant currants, spicy cinnamon and a pinch of brown sugar to deliver a sweet twist to an irresistibly delicious snack.",
+                    "subCopy": "Discover our delicious Glazed Mix range, crafted with fine quality peanuts, almonds, cashews and dried fruit  with sophisticated gourmet deli inspired ingredients.",
+                    "packImageUrl": "/products/nuts/Glazed-Nuts-Apple-Cinnamon-Crumble.png",
+                    "particleUrl": "/products/nuts/particles-nuts.png",
+                    "flavourPairing": {
+                        "image": "/images/flavour-pairings/placeholder.jpg",
+                        "copy": ""
+                    },
+                    "nutritionalInfo": {
+                        "image": "/products/nutritional-info/nuts-AppleCinnamonCrumble-Info@2x.png"
+                    },
+                    "particles": {
+                        "index": 3,
+                        "smallItemCount": 7,
+                        "largeItemCount": 3,
+                        "randomSeed": 432
+                    },
+                    "meta": {
+                        "description": "Looking for something different? Snack on Apple Cinnamon Crumble Mixed Nuts for an explosion of new flavours. Find this Red Rock Deli® snack in store now.",
+                        "keywords": "Red, Rock, Deli, Chips, Nuts, Feed your curiosity, curious chips and nuts",
+                        "title": "Apple Cinnamon Crumble | Mixed Nuts | Red Rock Deli©"
+                    }
+                }
+            ]
+        }
+    }
+]
