@@ -9,6 +9,7 @@ import Hero from "./components/Hero";
 import ScrollReveal from "./utils/ScrollReveal";
 import LoadingAnimation from "./utils/LoaderAnimation";
 import InstagramFeed from "./components/InstagramFeed";
+import MeetTheChefs from "./components/MeetTheChefs";
 
 const HomePage = () => {
     const DiscoverTheRange = React.lazy(() =>
@@ -17,23 +18,32 @@ const HomePage = () => {
     const SecretSuppers = React.lazy(() =>
         import("./components/SecretSuppers")
     );
+    const MeetTheChefs = React.lazy(() => import("./components/MeetTheChefs"));
     const WhereToBuy = React.lazy(() => import("./components/WhereToBuy"));
 
     return (
         <ScrollReveal>
             <div className="page-wrapper home-page">
                 <Hero />
+
                 <Suspense>
                     <DiscoverTheRange showCanvas={false} />
                 </Suspense>
+
                 <Suspense>
                     <SecretSuppers />
                 </Suspense>
+
                 <Suspense>
-                    <InstagramFeed count={3} />
+                    <MeetTheChefs />
                 </Suspense>
+
                 <Suspense>
                     <WhereToBuy />
+                </Suspense>
+
+                <Suspense>
+                    <InstagramFeed count={3} />
                 </Suspense>
 
                 {/* <Helmet>

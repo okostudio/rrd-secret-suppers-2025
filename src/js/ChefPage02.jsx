@@ -1,3 +1,4 @@
+
 import React from "react";
 // import { Helmet } from "react-helmet";
 import { HeroStatic } from "./components/Hero";
@@ -15,7 +16,7 @@ const ChefPage01 = () => {
                     backgroundUrl={
                         "/images/secret-suppers/colin-fassnidge-hero.jpg"
                     }
-                    title={"Colin Fassnidge"}
+                    title={"Laurrie Ipsumworth"}
                 />
                 <section className="SecretSuppersCarousel sr-item line-top line-top-black">
                     {/* =================================== */}
@@ -23,7 +24,7 @@ const ChefPage01 = () => {
                         photoUrl="/images/meet-the-chefs/chef-profile-photo-1.jpg"
                         photoAlt="Chef's name"
                     >
-                        <h2>Colin Fassnidge</h2>
+                        <h2>Laurrie Ipsumworth</h2>
                         <p className="large">
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit. Quisque ut tincidunt lectus. Integer suscipit

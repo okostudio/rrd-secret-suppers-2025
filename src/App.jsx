@@ -9,6 +9,7 @@ import Footer from "./js/components/Footer";
 import FAQs from "./js/FAQs";
 // import ScrollToTop from "./js/components/ScrollToTop";
 import ChefPage01 from "./js/ChefPage01";
+import ChefPage02 from "./js/ChefPage02";
 import EventPageSydney from "./js/EventPageSydney";
 import ScrollReveal from "./js/utils/ScrollReveal";
 import OurRange from "./js/OurRange";
@@ -57,12 +58,12 @@ function App() {
                             element={<SecretSuppersPage />}
                         />
                         <Route
-                            path="/secret-suppers/chef-name-1/"
+                            path="/secret-suppers/colin-fassnidge/"
                             element={<ChefPage01 />}
                         />
                         <Route
-                            path="/secret-suppers/chef-name-2/"
-                            element={<ChefPage01 />}
+                            path="/secret-suppers/laurrie-ipsumworth/"
+                            element={<ChefPage02 />}
                         />
                         <Route
                             path="/secret-suppers/sydney/"

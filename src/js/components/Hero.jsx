@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import FeedYourCuriosity from "../../img/lockups/feed-your-curiosity---sprites.png";
 import SecretSuppersLockup from "../../img/lockups/secret-suppers-header-lockup-wide.png";
 import SecretSuppersLockupStacked from "../../img/lockups/secret-suppers-lockup--white.png";

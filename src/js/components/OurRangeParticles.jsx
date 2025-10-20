@@ -1,9 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FauxRandom, CosRandom } from "../utils/FauxRandom";
 import { gsap, Power3, Power4, Sine } from "gsap";
 import OurRangeIcons from "./OurRangeIcons";
 import { IconLast, IconNext } from "./SVGIcons";
 import LoadingAnimation from "../utils/LoaderAnimation";
+import { useGSAP } from "@gsap/react";
 
 const OurRangeParticles = props => {
     // console.log("--> Start of OurRangeParticles Component");
@@ -34,8 +35,11 @@ const OurRangeParticles = props => {
         product: null,
         globalAlpha: 1
     };
-    let hasInit = false;
-    const canvasRef = useRef(null);
+    const canvasRef = useRef();
+    const canvasContainerRef = useRef();
+    const productImages = useRef();
+    const productImgRef = useRef();
+    const particleImgRef = useRef();
     const description = useRef();
     let particleArray = [];
     let TL = null;
@@ -52,6 +56,7 @@ const OurRangeParticles = props => {
     let nextProductUrl = "";
 
     // load staggger
+    const [hasInit, setHasInit] = useState(false);
     const [pageLoading, setPageLoading] = useState(true);
     const [revealDelay, setRevealDelay] = useState(1.0);
     const clearCanvas = () => {
@@ -59,7 +64,7 @@ const OurRangeParticles = props => {
         const ctx = can.getContext("2d");
         ctx.clearRect(0, 0, can.width, can.height);
     };
-    useEffect(() => {
+    useGSAP(() => {
         setIsHidden("");
         const can = canvasRef.current;
         const ctx = can.getContext("2d");
@@ -71,17 +76,18 @@ const OurRangeParticles = props => {
                 // console.log("LOADED RANGE PARTICLES");
                 setPageLoading(false);
                 setRevealDelay(0.05);
-                hasInit = true;
+                setHasInit(true);
             }
+            console.log("TIME OUT COMPLETE ;>.  :)))")
         }, 100);
-    }, [props.pageIsLoading]);
+    }, [canvasContainerRef]);
 
     //
     //
     const Product = {
         x: 0,
         y: 0,
-        direction: props.current.productAnimationDirection,
+        direction: props.current.productAnimationDirection ? props.current.productAnimationDirection : -1,
         alpha: 1,
         scale: 1,
         rotation: Math.PI * 0.02,
@@ -114,7 +120,8 @@ const OurRangeParticles = props => {
                 props.current.products[next].url
             )}`;
             hideParticles();
-            gsap.to(".loader-container", 0.2, {
+            gsap.to(".loader-container", {
+                duration: 0.2,
                 opacity: 1,
                 ease: Power3.easeIn
             });
@@ -124,7 +131,7 @@ const OurRangeParticles = props => {
     // =======================================
     // image preloader
     // =======================================
-    const loadImg = source => {
+    const loadImg = (source) => {
         if (!window.imageCache) {
             window.imageCache = [];
         }
@@ -165,8 +172,8 @@ const OurRangeParticles = props => {
 
     useEffect(() => {
         updateSpriteImages();
-
         window.addEventListener("popstate", onLocationChange);
+        onResize()
 
         return () => {
             // clean-up on dismount.
@@ -177,7 +184,7 @@ const OurRangeParticles = props => {
 
     const updateSpriteImages = () => {
         sprites.particles = loadImg(props.current.product.particleUrl);
-        sprites.product = loadImg(props.current.product.packImageUrl);
+        sprites.product = loadImg(props.current.product.packImageUrl, productImgRef);
     };
 
     // point at the center of the canvas
@@ -427,6 +434,33 @@ const OurRangeParticles = props => {
         });
     };
 
+    const drawParticle = (p, ctx) => {
+        if (p) {
+            ctx.translate(
+                origin.x + p.x + p.wiggle.x,
+                origin.y + p.y + p.wiggle.y
+            );
+            ctx.globalAlpha = p.alpha;
+            ctx.rotate(p.rotation + p.wiggle.rotation);
+            ctx.drawImage(
+                sprites.particles,
+                p.img.x,
+                p.img.y,
+                p.img.size,
+                p.img.size,
+                p.img.size * -0.5 * p.scale * scaleMultiplier,
+                p.img.size * -0.5 * p.scale * scaleMultiplier,
+                p.img.size * p.scale * scaleMultiplier,
+                p.img.size * p.scale * scaleMultiplier
+            );
+            ctx.rotate(-p.rotation - p.wiggle.rotation);
+            ctx.translate(
+                -p.x - p.wiggle.x - origin.x,
+                -p.y - p.wiggle.y - origin.y
+            );
+        }
+    };
+
     const updateCanvas = () => {
         const config = props.data.config;
         const can = canvasRef.current;
@@ -437,32 +471,7 @@ const OurRangeParticles = props => {
             // clear canvas
             ctx.clearRect(0, 0, can.width, can.height);
 
-            const drawParticle = p => {
-                if (p) {
-                    ctx.translate(
-                        origin.x + p.x + p.wiggle.x,
-                        origin.y + p.y + p.wiggle.y
-                    );
-                    ctx.globalAlpha = p.alpha;
-                    ctx.rotate(p.rotation + p.wiggle.rotation);
-                    ctx.drawImage(
-                        sprites.particles,
-                        p.img.x,
-                        p.img.y,
-                        p.img.size,
-                        p.img.size,
-                        p.img.size * -0.5 * p.scale * scaleMultiplier,
-                        p.img.size * -0.5 * p.scale * scaleMultiplier,
-                        p.img.size * p.scale * scaleMultiplier,
-                        p.img.size * p.scale * scaleMultiplier
-                    );
-                    ctx.rotate(-p.rotation - p.wiggle.rotation);
-                    ctx.translate(
-                        -p.x - p.wiggle.x - origin.x,
-                        -p.y - p.wiggle.y - origin.y
-                    );
-                }
-            };
+
 
             // upper layer, has dropshadow
             // ctx.filter = `blur(0px)`;
@@ -471,7 +480,7 @@ const OurRangeParticles = props => {
                 i < Math.floor(config.smallSpriteCount * 0.33);
                 ++i
             ) {
-                drawParticle(particleArray[i]);
+                drawParticle(particleArray[i], ctx);
             }
             // upper layer, has dropshadow
             ctx.filter = `none`;
@@ -480,7 +489,7 @@ const OurRangeParticles = props => {
                 i < config.smallSpriteCount;
                 ++i
             ) {
-                drawParticle(particleArray[i]);
+                drawParticle(particleArray[i], ctx);
             }
             // upper layer, has dropshadow
             ctx.filter = `drop-shadow(0px 20px 5px rgba(0,0,0,0.2))`;
@@ -491,7 +500,7 @@ const OurRangeParticles = props => {
                 i < config.smallSpriteCount + config.largeSpriteCount;
                 ++i
             ) {
-                drawParticle(particleArray[i]);
+                drawParticle(particleArray[i], ctx);
             }
 
             ctx.restore();
@@ -525,7 +534,7 @@ const OurRangeParticles = props => {
                 Product,
                 1.0,
                 {
-                    x: 150 * -props.current.productAnimationDirection,
+                    x: 150 * (-props.current.productAnimationDirection ? props.current.productAnimationDirection : 0),
                     ease: Power3.easeOut
                 },
                 0
@@ -607,9 +616,11 @@ const OurRangeParticles = props => {
         onResize();
         defineParticles();
         updateProduct();
-        initCanvas();
         clearCanvas();
-        hasInit = true;
+        window.setTimeout(() => {
+            initCanvas()
+        }, 50)
+        setHasInit(true);
         if (!canUpdate) setCanUpdate(true);
 
         // on mount.
@@ -622,7 +633,7 @@ const OurRangeParticles = props => {
     };
 
     return (
-        <div className="canvas-container">
+        <div className="canvas-container" ref={canvasContainerRef}>
             <div className="canvas-inner">
                 <LoadingAnimation />
                 <canvas
@@ -631,6 +642,10 @@ const OurRangeParticles = props => {
                     ref={canvasRef}
                     className={"particle-system" + isHidden}
                 />
+                <div className="product-images" ref={productImages}>
+                    <img ref={productImgRef} src={props.current.product.packImageUrl} alt={props.current.product.title} />
+                    <img ref={particleImgRef} src={props.current.product.particleUrl} alt={props.current.product.title} />
+                </div>
             </div>
             <div ref={description} className={"description" + isHidden}>
                 <div className={"copy"}>

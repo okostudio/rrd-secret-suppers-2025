@@ -6,16 +6,16 @@ const Locations = props => {
         <div className="locations">
             <div className="locations-list">
                 <Location
-                    date={"May 21, 2020"}
+                    date={"May 21, 2024"}
                     location={"Secret Sydney Location"}
-                    chefName={"Chef Name 1"}
-                    eventURL="events/sydney"
+                    chefName={"Colin Fassnidge"}
+                    eventURL="/secret-suppers/sydney/"
                 />
                 <Location
-                    date={"May 28, 2020"}
+                    date={"May 28, 2024"}
                     location={"Secret Melbourne Location"}
-                    chefName={"Chef Name 2"}
-                    eventURL="events/melbourne"
+                    chefName={"Laurrie Ipsumworth"}
+                    eventURL="/secret-suppers/melbourne/"
                 />
             </div>
             <img
@@ -31,7 +31,11 @@ export default Locations;
 
 const Location = props => {
     return (
-        <Link className="location" to={props.eventURL}>
+        <Link
+            className="location"
+            to={props.eventURL}
+            onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: 'smooth' }) }}
+        >
             <div className="location-copy">
                 <h3 className="date">{props.date}</h3>
                 <p className="location-text">{props.location}</p>

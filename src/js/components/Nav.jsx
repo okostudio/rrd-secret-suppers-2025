@@ -6,13 +6,21 @@ import Logo from "./Logo";
 function Nav() {
     const [isToggled, setToggled] = useState(false);
     const toggleTrueFalse = () => setToggled(!isToggled);
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0, // Scrolls to the top of the page
+            left: 0, // Scrolls to the left edge of the page
+            behavior: 'smooth' // Enables smooth scrolling animation
+        });
+    }
     const showContact = () => {
         hideHamburger();
-        window.scrollTo(
-            0,
-            document.getElementById("contact").offsetTop -
-            document.body.scrollTop
-        );
+        // window.scrollTo(
+        //     0,
+        //     document.getElementById("contact").offsetTop -
+        //     document.body.scrollTop
+        // );
+        document.getElementById("contact").scrollIntoView({ behavior: 'smooth' });
     };
     const hideHamburger = () => {
         console.log("toggling");
@@ -29,7 +37,10 @@ function Nav() {
                 <nav>
                     <ul>
                         <li className="our-range-dropdown">
-                            <Link to="/our-range/" onClick={hideHamburger}>
+                            <Link to="/our-range/" onClick={() => {
+                                hideHamburger()
+                                scrollToTop()
+                            }}>
                                 OUR RANGE
                             </Link>
                             {/* <Dropdown /> */}
@@ -37,18 +48,24 @@ function Nav() {
                         <li>
                             <div className="divider"></div>
                         </li>
-                        {/* <li>
-                            <Link to="/secret-suppers/" onClick={hideHamburger}>
+                        <li>
+                            <Link to="/secret-suppers/" onClick={() => {
+                                hideHamburger()
+                                scrollToTop()
+                            }}>
                                 SECRET SUPPERS
                             </Link>
-                        </li> 
+                        </li>
                         <li>
                             <div className="divider"></div>
-                        </li> */}
+                        </li>
                         <li>
-                            <div className="a" onClick={showContact}>
+                            <Link className="a" onClick={(e) => {
+                                e.preventDefault();
+                                showContact()
+                            }}>
                                 CONTACT
-                            </div>
+                            </Link>
                         </li>
                     </ul>
                 </nav>

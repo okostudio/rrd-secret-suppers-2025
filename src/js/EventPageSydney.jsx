@@ -18,7 +18,7 @@ const EventPageSydney = () => {
                         "/images/secret-suppers/ss-event1-hero-wide.jpg"
                     }
                     title={"Earlthy delights"}
-                    h3="MONTH XX, YYYY"
+                    h3="Thursday, May 21, 2024"
                     p="Location details"
                 />
 
@@ -26,7 +26,7 @@ const EventPageSydney = () => {
                     <EventInfo
                         info={
                             <React.Fragment>
-                                <h3>MONTH XX, YYYY</h3>
+                                <h3>Thursday, May 21, 2024</h3>
                                 <p>Location address</p>
                                 <div>
                                     <h5>
@@ -36,7 +36,7 @@ const EventPageSydney = () => {
                                 </div>
                             </React.Fragment>
                         }
-                        time="Thursday, May 21, 2020"
+                        time="Thursday, May 21, 2024"
                         location="Secret Sydney Location"
                         price="$110.00"
                     >

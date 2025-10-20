@@ -21,15 +21,15 @@ const MeetTheChefs = props => {
                         <div className="chef-holder">
                             <Chef
                                 imageUrl="/images/meet-the-chefs/meet-the-chefs-placeholder-1.jpg"
-                                chefName="Chef Name 1"
+                                chefName="Colin Fassnidge"
                                 key={1}
-                                linkTo="/chef1"
+                                linkTo="/secret-suppers/colin-fassnidge/"
                             />
                             <Chef
                                 imageUrl="/images/meet-the-chefs/meet-the-chefs-placeholder-2.jpg"
-                                chefName="Chef Name 2"
+                                chefName="Laurrie Ipsumworth"
                                 key={2}
-                                linkTo="/chef1"
+                                linkTo="/secret-suppers/laurrie-ipsumworth/"
                             />
                         </div>
 
@@ -46,13 +46,13 @@ const MeetTheChefs = props => {
                     </div>
                 </div>
 
-                <div className="looking-for-a-ticket">
+                {/* <div className="looking-for-a-ticket">
                     <div>
                         <div className="icon icon-ticket" />
                         <h2>LOOKING FOR A TICKET?</h2>
                         <ButtonPrimary>Buy your ticket</ButtonPrimary>
                     </div>
-                </div>
+                </div> */}
             </div>
         </section>
     );

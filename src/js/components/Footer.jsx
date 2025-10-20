@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import Logo from "../../img/logos/rrd-logo-01.svg";
 // import EnquiryForm from "./EnquiryForms";
 
+import fbIcon from "../../img/icons/facebook.svg";
+import igIcon from "../../img/icons/instagram.svg";
+
 function Footer() {
     return (
         <section className="Footer" id="contact" name="contact">
@@ -19,12 +22,14 @@ function Footer() {
                             href="https://www.facebook.com/RedRockDeli/"
                         >
                             <span />
+                            <img src={fbIcon} alt="facebook" />
                         </Link>
                         <Link
                             className="instagram"
                             href="https://www.instagram.com/red_rock_deli/"
                         >
                             <span />
+                            <img src={igIcon} alt="instagram" />
                         </Link>
                     </div>
                 </div>

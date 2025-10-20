@@ -246,6 +246,17 @@
 
                 // background: rgba(255, 0, 0, 0.4);
             }
+
+            .product-images {
+                position: absolute;
+
+                img {
+                    position: absolute;
+                    visibility: hidden;
+                    width: auto;
+                    max-height: 160px;
+                }
+            }
         }
 
         .description {
