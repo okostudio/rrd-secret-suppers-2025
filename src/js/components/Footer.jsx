@@ -71,7 +71,7 @@ function Footer() {
                         </Link>
                     </div>
                     <div className="right">
-                        <p>&copy;Red Rock Deli™ 2020</p>
+                        <p>&copy;Red Rock Deli™ 2025</p>
                     </div>
                 </div>
             </div>
