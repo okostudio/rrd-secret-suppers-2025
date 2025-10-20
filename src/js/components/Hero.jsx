@@ -23,8 +23,8 @@ function Hero() {
 
     const video_url =
         window.innerWidth < 768
-            ? "/videos/homepage_video_sml.mp4"
-            : "/videos/homepage_video.mp4";
+            ? "/videos/homepage_video_sml"
+            : "/videos/homepage_video";
 
     // console.log(video_url);
 
@@ -45,7 +45,8 @@ function Hero() {
                     playsInline muted autoPlay loop
 
                 >
-                    <source src={video_url} type="video/mp4" />
+                    <source src={video_url + ".mp4"} type="video/mp4" />
+                    <source src={video_url + ".webm"} type="video/webm" />
                 </video>
             </div>
 

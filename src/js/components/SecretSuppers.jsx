@@ -9,8 +9,8 @@ const SecretSuppers = () => {
     const [isPlaying, setPlaying] = useState(false);
     const videoUrl =
         window.innerWidth < 768
-            ? "/videos/secret-suppers-teaser-video-sml.mp4"
-            : "/videos/secret-suppers-teaser-video-lrg.mp4";
+            ? "/videos/secret-suppers-teaser-video-sml"
+            : "/videos/secret-suppers-teaser-video-lrg";
 
     return (
         <section className="SecretSuppers sr-item">
@@ -55,7 +55,8 @@ const SecretSuppers = () => {
                             muted autoPlay loop
                             controls={isPlaying}
                         >
-                            <source src={videoUrl} type="video/mp4" />
+                            <source src={videoUrl + ".mp4"} type="video/mp4" />
+                            <source src={videoUrl + ".webm"} type="video/webm" />
                         </video>
                     </div>
 
